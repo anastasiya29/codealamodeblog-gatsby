@@ -31,11 +31,12 @@ const Container = styled(Flex)`
   }
 `;
 
-const Banner = ({ title }) => (
+const Banner = ({ siteTitle, siteDescription }) => (
   <Container>
     <div className="empty-pre"></div>
     <Box p={['2em', '3em', '4em']} className="title">
-      <Heading as="h1" fontSize={[3, 4, 5]}>{title}</Heading>
+      <Heading as="h1" fontSize={[3, 4, 5]}>{siteTitle}</Heading>
+      <div>{siteDescription}</div>
     </Box>
     <div className="empty-post"></div>
   </Container>

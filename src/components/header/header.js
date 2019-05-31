@@ -19,10 +19,10 @@ const AnimatedContainer = posed.div({
   },
 });
 
-const Header = ({ title }) => (
+const Header = ({ siteMetadata }) => (
   <AnimatedContainer>
-    <Nav title={title} />
-    <Banner title={title} />
+    <Nav title={siteMetadata.siteTitle} />
+    <Banner {...siteMetadata} />
   </AnimatedContainer>
 );
 

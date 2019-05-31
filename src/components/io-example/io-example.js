@@ -1,6 +1,6 @@
 import React from 'react';
 import IO from 'components/io';
-import Title from 'components/title';
+import { Heading } from 'rebass';
 import { Container } from './io-example.css';
 
 // <IO> uses a render prop to pass down `isVisible` and `hasBeenVisible`.
@@ -11,7 +11,7 @@ const IOExample = () => (
   <IO rootMargin="-50px">
     {({ isVisible }) => (
       <Container isVisible={isVisible}>
-        <Title tag="span">IntersectionObserver</Title>
+        <Heading as="span">IntersectionObserver</Heading>
       </Container>
     )}
   </IO>
