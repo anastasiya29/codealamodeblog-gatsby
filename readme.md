@@ -113,7 +113,6 @@ Find the site-wide configuration in `site-config.js`.
 ```js
 module.exports = {
   siteTitle: `Code à la Mode`,
-  siteTitleShort: `CodeMode`,
   siteDescription: `A technical blog about the sweet details that make software delicious.`,
   siteUrl: `https://www.codealamodeblog.com`,
   themeColor: `#000`,

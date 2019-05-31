@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const {
-  siteTitleShort,
+  siteTitle,
   themeColor,
   backgroundColor,
 } = require('../site-config');
@@ -16,7 +16,7 @@ if (!fs.existsSync(dir)) {
 const source = 'src/images/icon.png';
 const configuration = {
   path: '/icons/',
-  appName: siteTitleShort,
+  appName: siteTitle,
   appDescription: null,
   developerName: null,
   developerURL: null,
@@ -41,7 +41,7 @@ const configuration = {
   },
 };
 
-const callback = function(err, res) {
+const callback = function (err, res) {
   if (err) {
     console.log(err.message);
     return;
