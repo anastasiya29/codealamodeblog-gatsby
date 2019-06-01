@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Heading } from 'rebass';
+import { Text } from 'rebass';
 import styled from 'styled-components';
 import { accentTeal, lightestTeal, text } from 'constants/theme';
 
@@ -32,14 +32,14 @@ const Container = styled.nav`
   }
 `;
 
-const Nav = ({ title }) => (
+const Nav = () => (
   <Container>
     <Link to="/">
-      <Heading as="div">{title}</Heading>
+      <Text>Code à la Mode Home</Text>
     </Link>
     <ul>
       <li>
-        <Link to="/posts">Posts</Link>
+        <Link to="/posts">Articles</Link>
       </li>
       <li>
         <a target="_blank" rel="noopener noreferrer" href="https://noti.st/anastasiyaflynn">Presentations</a>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Box from 'components/box';
+import Box from 'rebass';
 import Layout from 'components/layout';
 
 const NotFound = () => (

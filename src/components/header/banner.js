@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import BannerImage from '../../../content/images/banner.png';
 import { Flex, Box, Heading } from 'rebass';
-import { accentPink } from 'constants/theme';
+import { accentPink, lightestTeal } from 'constants/theme';
 
 const Container = styled(Flex)`
   background-image: url("${BannerImage}");
@@ -14,7 +14,7 @@ const Container = styled(Flex)`
     justify-self: center;
     align-self: center;
     max-width: 475px;
-    background-color: white;
+    background-color: ${lightestTeal};
     border: ${accentPink} solid 10px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
     @media (min-width: 1224px) {

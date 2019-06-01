@@ -1,31 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text } from 'rebass';
+import { Box } from 'rebass';
+import styled from 'styled-components';
 import Layout from 'components/layout';
-import Box from 'components/box';
-import Gallery from 'components/gallery';
+import PostListing from 'components/postListing';
+import Projects from 'components/projects';
 import IOExample from 'components/io-example';
-import Modal from 'containers/modal';
-import { graphql } from 'gatsby';
 
-const Index = ({ data }) => (
+const Columns = styled(Box).attrs({
+  p: ['2em', '4em']
+})`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+`;
+
+const Index = () => (
   <Layout>
-    <Box>
-      <Text>
-        {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
-      </Text>
-      <Modal>
-        <video
-          src="https://i.imgur.com/gzFqNSW.mp4"
-          playsInline
-          loop
-          autoPlay
-          muted
-        />
-      </Modal>
-    </Box>
-    <Gallery items={data.homeJson.gallery} />
-    <div style={{ height: '50vh' }} />
+    <Columns>
+      <PostListing count={5} />
+      <Box></Box>
+    </Columns>
+    <Projects />
     <IOExample />
   </Layout>
 );
@@ -35,28 +30,3 @@ Index.propTypes = {
 };
 
 export default Index;
-
-export const query = graphql`
-  query HomepageQuery {
-    homeJson {
-      title
-      content {
-        childMarkdownRemark {
-          html
-          rawMarkdownBody
-        }
-      }
-      gallery {
-        title
-        copy
-        image {
-          childImageSharp {
-            fluid(maxHeight: 500, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    }
-  }
-`;

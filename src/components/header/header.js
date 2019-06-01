@@ -21,13 +21,16 @@ const AnimatedContainer = posed.div({
 
 const Header = ({ siteMetadata }) => (
   <AnimatedContainer>
-    <Nav title={siteMetadata.siteTitle} />
+    <Nav />
     <Banner {...siteMetadata} />
   </AnimatedContainer>
 );
 
 Header.propTypes = {
-  title: PropTypes.string.isRequired,
+  siteMetadata: PropTypes.shape({
+    siteTitle: PropTypes.string.isRequired,
+    siteDescription: PropTypes.string
+  }).isRequired
 };
 
 export default Header;
