@@ -90,5 +90,6 @@ export default createGlobalStyle`
 
   p {
     margin-bottom: 2rem;
+    line-height: 22px;
   }
 `;

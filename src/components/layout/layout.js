@@ -5,11 +5,11 @@ import Head from './head';
 import Header from 'components/header';
 import GlobalStyle from 'global.css.js';
 
-const Layout = ({ data, children }) => (
+const Layout = ({ data, children, pageTitle, pageDescription }) => (
   <div>
     <GlobalStyle />
     <Head />
-    <Header siteMetadata={data.site.siteMetadata} />
+    <Header siteMetadata={data.site.siteMetadata} pageTitle={pageTitle} pageDescription={pageDescription} />
     {children}
   </div>
 );

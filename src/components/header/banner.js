@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import BannerImage from '../../../content/images/banner.png';
 import { Flex, Box, Heading } from 'rebass';
 import { accentPink, lightestTeal } from 'constants/theme';
+import MEDIA from 'helpers/mediaTemplates';
 
 const Container = styled(Flex)`
   background-image: url("${BannerImage}");
@@ -17,9 +19,9 @@ const Container = styled(Flex)`
     background-color: ${lightestTeal};
     border: ${accentPink} solid 10px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
-    @media (min-width: 1224px) {
+    ${MEDIA.MIN_DESKTOP`
       max-width: 600px;
-    }
+    `};
   }
   .empty-pre {
     flex-grow: 0.5;
@@ -31,15 +33,23 @@ const Container = styled(Flex)`
   }
 `;
 
-const Banner = ({ siteTitle, siteDescription }) => (
+const Banner = ({ siteMetadata, pageTitle, pageDescription }) => (
   <Container>
     <div className="empty-pre"></div>
     <Box p={['2em', '3em', '4em']} className="title">
-      <Heading as="h1" fontSize={[3, 4, 5]}>{siteTitle}</Heading>
-      <div>{siteDescription}</div>
+      <Heading as="h1" fontSize={[3, 4, 5]} mb="10px">{pageTitle || siteMetadata.siteTitle}</Heading>
+      <p>{pageDescription || siteMetadata.siteDescription}</p>
     </Box>
     <div className="empty-post"></div>
   </Container>
 );
+
+Banner.propTypes = {
+  siteMetadata: PropTypes.shape({
+    siteTitle: PropTypes.string.isRequired,
+    siteDescription: PropTypes.string
+  }).isRequired,
+  siteTitle: PropTypes.string
+};
 
 export default Banner;

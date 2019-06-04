@@ -39,7 +39,7 @@ const Nav = () => (
     </Link>
     <ul>
       <li>
-        <Link to="/posts">Articles</Link>
+        <Link to="/posts">Posts</Link>
       </li>
       <li>
         <a target="_blank" rel="noopener noreferrer" href="https://noti.st/anastasiyaflynn">Presentations</a>
@@ -47,6 +47,7 @@ const Nav = () => (
       <li>
         <Link to="/about">About</Link>
       </li>
+      <li>RSS</li>
     </ul>
   </Container>
 );

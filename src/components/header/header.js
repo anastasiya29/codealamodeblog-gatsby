@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import posed from 'react-pose';
 import Nav from './nav';
 import Banner from './banner';
@@ -19,18 +18,11 @@ const AnimatedContainer = posed.div({
   },
 });
 
-const Header = ({ siteMetadata }) => (
+const Header = (props) => (
   <AnimatedContainer>
     <Nav />
-    <Banner {...siteMetadata} />
+    <Banner {...props} />
   </AnimatedContainer>
 );
-
-Header.propTypes = {
-  siteMetadata: PropTypes.shape({
-    siteTitle: PropTypes.string.isRequired,
-    siteDescription: PropTypes.string
-  }).isRequired
-};
 
 export default Header;
