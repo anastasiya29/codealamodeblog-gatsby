@@ -1,6 +1,7 @@
 const path = require('path');
 const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const { createPosts, createTags } = require('./src/gatsby/pageCreator');
 
 exports.onCreateWebpackConfig = ({
   stage,
@@ -20,62 +21,54 @@ exports.onCreateWebpackConfig = ({
 };
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  function slugFriendly(string) {
-    return '/' + string.replace(/[\.\s]/g, '-');
-  }
-
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
-    const categories = node.frontmatter.categories || []
-    let slug = createFilePath({
+    const slug = createFilePath({
       node,
       getNode,
       basePath: `posts`,
       trailingSlash: false,
-    })
-
-    if (categories.length > 1) {
-      slug = slugFriendly(categories[1]) + slug
-    }
-
-    if (categories.length > 0) {
-      slug = slugFriendly(categories[0]) + slug
-    }
+    });
 
     createNodeField({
       node,
       name: `slug`,
       value: slug,
-    })
+    });
   }
 };
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
+
   return new Promise((resolve, reject) => {
     graphql(`
-      {
-        allMarkdownRemark {
-          edges {
-            node {
-              fields {
-                slug
-              }
+    {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              tags
             }
           }
         }
       }
-    `).then(results => {
-      results.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        createPage({
-          path: node.fields.slug,
-          component: path.resolve('./src/pages/post.js'),
-          context: {
-            slug: node.fields.slug,
-          },
-        })
-      })
-      resolve()
-    })
-  })
+    }`).then(results => {
+      // Path to templates
+      const postTemplate = path.resolve('./src/templates/post.js');
+      const tagTemplate = path.resolve('./src/templates/tag.js');
+      const posts = results.data.allMarkdownRemark.edges;
+
+      // Programmatically create pages
+      createPosts(posts, createPage, postTemplate);
+      createTags(posts, createPage, tagTemplate);
+      resolve();
+    });
+  });
 };
