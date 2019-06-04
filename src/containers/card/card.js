@@ -8,16 +8,10 @@ const Container = styled(Box).attrs({
     my: [20, 30]
 })`
     height: auto;
-    border-radius: 4px;
+    border-radius: 7px;
     border: ${lightGray} solid 1px;
-    box-shadow: 0 5px 10px ${lightGray};
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.25s;
-    line-height: 22px;
-
-    &:hover {
-      top: -10px;
-      box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-    }
 `;
 
 const Card = (props) => (
