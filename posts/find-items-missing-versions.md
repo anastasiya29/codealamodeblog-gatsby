@@ -4,8 +4,9 @@ description: Powershell script for finding Sitecore items that are missing versi
 date: 2017-11-16 12:00:00
 tags:
 - Sitecore
-- Powershell
-- Globalization
+- content authoring
+- powershell
+- globalization
 ---
 ## The Missing Language Version Problem
 [[snippet]]

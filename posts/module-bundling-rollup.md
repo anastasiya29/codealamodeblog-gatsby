@@ -4,9 +4,10 @@ description: Tutorial for building Sitecore renderings with JavaScript modules; 
 date: 2017-12-03 12:00:00
 tags:
 - Sitecore
-- Node
-- Npm
-- Rollup
+- JavaScript
+- node
+- npm
+- rollup
 ---
 
 [[snippet]]

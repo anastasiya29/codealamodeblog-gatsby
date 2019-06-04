@@ -5,7 +5,8 @@ featuredImage: jss.png
 tags:
   - Sitecore
   - Sitecore JavaScript Services
-  - React
+  - JavaScript
+  - react
 date: 2019-01-30 12:00:00
 ---
 

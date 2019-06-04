@@ -3,8 +3,8 @@ title: Node.js for (.NET) Dummies
 description: Introduction to the world of Node.js for Sitecore developers
 date: 2017-12-01 12:00:00
 tags:
+- JavaScript
 - node
-- javascript
 ---
 
 [[snippet]]

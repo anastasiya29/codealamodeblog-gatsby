@@ -4,7 +4,7 @@ date: 2018-01-16 12:00:00
 description: How to inject extra metadata text into Experience Editor that allows content authors to differential between renderings that use local datasources and renderings that use shared datasources.
 tags:
 - Sitecore
-- Experience Editor
+- content authoring
 - Sitecore Tips
 featuredImage: treewithlocalandshareddatasources.png
 ---
