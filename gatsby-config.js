@@ -14,17 +14,33 @@ module.exports = {
             "options": {
                 plugins: [
                     {
-                        "resolve": "gatsby-remark-custom-blocks",
-                        "options": {
+                        resolve: "gatsby-remark-custom-blocks",
+                        options: {
                             "blocks": {
                                 "snippet": {
                                     "classes": "snippet"
                                 }
                             }
                         }
-                    }
-                ]
-            }
+                    },
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 590,
+                        },
+                    },
+                    {
+                        resolve: `gatsby-remark-prismjs`,
+                        options: {
+                            classPrefix: "language-",
+                            inlineCodeMarker: null,
+                            aliases: {},
+                            showLineNumbers: false,
+                            noInlineHighlight: false,
+                        },
+                    },
+                ],
+            },
         },
         {
             "resolve": "gatsby-plugin-excerpts",
@@ -121,6 +137,13 @@ module.exports = {
             options: {
                 name: `posts`,
                 path: `${__dirname}/posts/`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `images`,
+                path: `${__dirname}/content/images/`,
             },
         },
         `gatsby-plugin-sharp`,
