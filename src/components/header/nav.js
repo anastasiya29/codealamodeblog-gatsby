@@ -3,11 +3,13 @@ import { Link } from 'gatsby';
 import { Text } from 'rebass';
 import styled from 'styled-components';
 import { accentTeal, lightestTeal, text } from 'constants/theme';
+import Emoji from 'components/emoji';
 
 const Container = styled.nav`
   display: flex;
   background-color: ${lightestTeal};
   ul {
+    list-style: none;
     flex-grow: 3;
     display: flex;
     justify-content: flex-end;
@@ -28,6 +30,7 @@ const Container = styled.nav`
     &:hover {
       color: white;
       background-color: ${accentTeal};
+      text-decoration: none;
     }
   }
 `;
@@ -35,19 +38,21 @@ const Container = styled.nav`
 const Nav = () => (
   <Container>
     <Link to="/">
-      <Text>Code à la Mode Home</Text>
+      <Text><Emoji label="ice cream" symbol="🍦" /> Code à la Mode Home</Text>
     </Link>
     <ul>
       <li>
-        <Link to="/posts">Posts</Link>
+        <Link to="/posts"><Emoji label="brain" symbol="🧠" /> Posts</Link>
       </li>
       <li>
-        <a target="_blank" rel="noopener noreferrer" href="https://noti.st/anastasiyaflynn">Presentations</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://noti.st/anastasiyaflynn">
+          <Emoji label="microphone" symbol="🎤" /> Presentations
+        </a>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/about"><Emoji label="happy blushing" symbol="🤗" /> About</Link>
       </li>
-      <li>RSS</li>
+      <li><Emoji label="megaphone" symbol="🔊" /> RSS</li>
     </ul>
   </Container>
 );

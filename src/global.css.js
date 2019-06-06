@@ -15,11 +15,7 @@ export default createGlobalStyle`
   figure, figcaption, footer, header, hgroup,
   menu, nav, output, ruby, section, summary,
   time, mark, audio, video {
-    margin: 0;
-    padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
   }
 
@@ -35,7 +31,7 @@ export default createGlobalStyle`
 
   body {
     font-family: 'Maven Pro',sans-serif;
-    line-height: 1;
+    line-height: 1.6em;
     font-size: 1.6rem;
     color: #000;
     background-color: #fff;
@@ -46,10 +42,6 @@ export default createGlobalStyle`
     -webkit-font-feature-settings: "pnum";
     font-feature-settings: "pnum";
     font-variant-numeric: proportional-nums;
-  }
-
-  ol, ul {
-    list-style: none;
   }
 
   blockquote, q {
@@ -69,6 +61,10 @@ export default createGlobalStyle`
 
   a {
     color: ${accentTeal};
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   pre {
@@ -88,8 +84,7 @@ export default createGlobalStyle`
     max-width: 100%;
   }
 
-  p {
+  p, ul, ol {
     margin-bottom: 2rem;
-    line-height: 22px;
   }
 `;

@@ -37,7 +37,7 @@ const Banner = ({ siteMetadata, pageTitle, pageDescription }) => (
   <Container>
     <div className="empty-pre"></div>
     <Box p={['2em', '3em', '4em']} className="title">
-      <Heading as="h1" fontSize={[3, 4, 5]} mb="10px">{pageTitle || siteMetadata.siteTitle}</Heading>
+      <Heading as="h1" fontSize={[3, 4, 5]}>{pageTitle || siteMetadata.siteTitle}</Heading>
       <p>{pageDescription || siteMetadata.siteDescription}</p>
     </Box>
     <div className="empty-post"></div>
