@@ -1,10 +1,11 @@
 ---
 title: Sitecore JavaScript Services - How To Publish JSS Components As NPM Packages
-description: This post shares how I published JSS components as an npm package that can be imported into other JSS projects. This post is part of a series on learning to work with Sitecore JavaScript Services (JSS).
+description: This post shares how I published JSS components as an npm package that can be imported into other JSS projects.
+metaDescription: This post shares how I published JSS components as an npm package that can be imported into other JSS projects. This post is part of a series on learning to work with Sitecore JavaScript Services (JSS).
 featuredImage: jss.png
 tags:
   - Sitecore
-  - Sitecore JavaScript Services
+  - JSS
   - JavaScript
   - react
 date: 2019-03-06 12:00:00
@@ -28,6 +29,7 @@ I used a stripped down react starter. It’s based on the default JSS react star
 * References to i18n removed
 * References to bootstrap removed
 * Scripts and commands for connected mode removed
+
 _The purpose of a stripped down starter is for quick prototyping of disconnected react components only_. 
 
 ### Build components
