@@ -6,32 +6,17 @@ import Card from 'containers/card';
 import Layout from 'components/layout';
 import TopTags from 'components/topTags';
 import Emoji from 'components/emoji';
+import PostTags from './post/postTags';
+import PostBody from './post/postBody.css';
+import PostNavigation from './post/postNavigation.css';
 
-const PostNavigation = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  .right {
-    justify-self: end;
-    text-align: right;
-  }
-`;
-
-const PostBody = styled.div`
-  ul { margin-left: 20px; }
-  p ( margin: 1.6em 0; )
-  margin-bottom: 10vh;
-  h2, h3, h4 {
-    &::before {
-      content: "✨";
-    }
-  }
-`;
 
 const Post = ({ data: { post, left, right } }) => (
   <Layout pageTitle={post.frontmatter.title} pageDescription={post.frontmatter.description}>
     <Columns templateColumns="auto 70vw">
       <TopTags />
       <Card>
+        <PostTags tags={post.frontmatter.tags} />
         <PostBody dangerouslySetInnerHTML={{ __html: post.html }} />
         <PostNavigation>
           <div>
@@ -48,16 +33,16 @@ const Post = ({ data: { post, left, right } }) => (
               </Link>
             )}
           </div>
-          {left && (
-            <div>
+          <div>
+            {left && (
               <Link to={left.fields.slug}>{left.frontmatter.title}</Link>
-            </div>
-          )}
-          {right && (
-            <div className="right">
+            )}
+          </div>
+          <div className="right">
+            {right && (
               <Link to={right.fields.slug}>{right.frontmatter.title}</Link>
-            </div>
-          )}
+            )}
+          </div>
         </PostNavigation>
       </Card>
     </Columns>
@@ -72,6 +57,7 @@ export const query = graphql`
         title
         description
         date
+        tags
       }
     },
     left: markdownRemark(fields: { slug: { eq: $left } }) {

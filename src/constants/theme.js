@@ -11,3 +11,4 @@ export const softPink = '#f9d4e4';
 // grays
 export const text = '#757575';
 export const lightGray = '#dee2e3';
+export const gray = '#a3a5a5';

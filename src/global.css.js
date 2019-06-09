@@ -80,6 +80,10 @@ export default createGlobalStyle`
     font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
   }
 
+  :not(pre) > code[class*="language-"] {
+    padding: .1em 0.5em;;
+  }
+
   video {
     max-width: 100%;
   }

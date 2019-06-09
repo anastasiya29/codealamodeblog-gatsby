@@ -61,8 +61,8 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }`).then(results => {
       // Path to templates
-      const postTemplate = path.resolve('./src/templates/post.js');
-      const tagTemplate = path.resolve('./src/templates/tag.js');
+      const postTemplate = path.resolve('./src/templates/postPage.js');
+      const tagTemplate = path.resolve('./src/templates/tagPage.js');
       const posts = results.data.allMarkdownRemark.edges;
 
       // Programmatically create pages
