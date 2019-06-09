@@ -36,8 +36,10 @@ const Container = styled(Flex)`
 const Banner = ({ siteMetadata, pageTitle, pageDescription }) => (
   <Container>
     <div className="empty-pre"></div>
-    <Box p={['2em', '3em', '4em']} className="title">
-      <Heading as="h1" fontSize={[3, 4, 5]}>{pageTitle || siteMetadata.siteTitle}</Heading>
+    <Box p={['1em', '2em', '4em']} className="title">
+      <Heading as="h1" fontSize={[3, 4, 5]} lineHeight={['20px', '24px', '32px']}>
+        {pageTitle || siteMetadata.siteTitle}
+      </Heading>
       <p>{pageDescription || siteMetadata.siteDescription}</p>
     </Box>
     <div className="empty-post"></div>
