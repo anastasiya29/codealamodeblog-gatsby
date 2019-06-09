@@ -2,7 +2,6 @@
 title: Sitecore JavaScript Services - Creating Custom Routes and Displaying Route-Level Fields in Components
 description: This post shows how I used the manifest API to create a custom route type, and how I built a component for rendering and editing route-level content.
 metaDescription: This post shows how I used the manifest API to create a custom route type, and how I built a component for rendering and editing route-level content. This post is part of a series on learning to work with Sitecore JavaScript Services (JSS).
-featuredImage: jss.png
 tags:
   - Sitecore
   - JSS

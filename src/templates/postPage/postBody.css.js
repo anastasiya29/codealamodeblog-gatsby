@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightTeal } from 'constants/theme';
+import { softTeal } from 'constants/theme';
 
 const PostBody = styled.div`
   ul { margin-left: 20px; }
@@ -11,8 +11,11 @@ const PostBody = styled.div`
     }
   }
   blockquote {
-    background: ${lightTeal};
+    background: ${softTeal};
     padding: 1em 2em;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 `;
 

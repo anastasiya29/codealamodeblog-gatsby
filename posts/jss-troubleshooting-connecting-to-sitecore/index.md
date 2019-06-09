@@ -2,7 +2,6 @@
 title: Sitecore JavaScript Services - Troubleshooting Errors of Going Connected
 description: This post covers the errors I experienced when switching from disconnected to connected mode in JSS, and how I solved them.
 metaDescription: This post covers the errors I experienced when switching from disconnected to connected mode in JSS, and how I solved them. This post is part of a series on learning to work with Sitecore JavaScript Services (JSS).
-featuredImage: jss-troubleshooting-connecting-to-sitecore/errors-meme.jpg
 tags:
   - Sitecore
   - JSS

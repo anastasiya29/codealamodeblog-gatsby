@@ -7,7 +7,6 @@ tags:
   - yeoman
   - Visual Studio
 description: A tutorial for how to create a custom Visual Studio solution generator for Sitecore projects using the Node.js framework Yeoman.
-featuredImage: automate-with-yeoman/yeoman.png
 date: 2018-10-27 12:00:00
 ---
 

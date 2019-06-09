@@ -2,7 +2,6 @@
 title: Sitecore JavaScript Services - Manifest API Demystified
 description: This post explores the manifest API, which is used for modeling Sitecore data in disconnected, code-first workflow.
 metaDescription: This post explores the manifest API, which is used for modeling Sitecore data in disconnected, code-first workflow. This post is part of a series on learning to work with Sitecore JavaScript Services (JSS).
-featuredImage: jss.png
 tags:
   - Sitecore
   - JSS

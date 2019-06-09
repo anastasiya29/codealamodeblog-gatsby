@@ -5,11 +5,15 @@ import Head from './head';
 import Header from 'components/header';
 import GlobalStyle from 'global.css.js';
 
-const Layout = ({ data, children, pageTitle, pageDescription }) => (
-  <div>
+const Layout = ({ data, children, pageTitle, pageDescription, pageClassName, showDescription }) => (
+  <div className={pageClassName}>
     <GlobalStyle />
     <Head />
-    <Header siteMetadata={data.site.siteMetadata} pageTitle={pageTitle} pageDescription={pageDescription} />
+    <Header
+      siteMetadata={data.site.siteMetadata}
+      pageTitle={pageTitle}
+      pageDescription={pageDescription}
+      showDescription={showDescription} />
     {children}
   </div>
 );
@@ -17,6 +21,9 @@ const Layout = ({ data, children, pageTitle, pageDescription }) => (
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   data: PropTypes.object.isRequired,
+  pageTitle: PropTypes.string,
+  pageDescription: PropTypes.string,
+  pageClassName: PropTypes.string
 };
 
 const LayoutWithQuery = props => (

@@ -4,7 +4,6 @@ tags:
   - Sitecore
   - Coveo
 description: A tutorial for how to extend a Coveo Hive component with extra fields and validation. A tutorial for how to extend Coveo's "Numeric Slider Facet" component to search over multiple fields.
-featuredImage: slider_facet_for_range.png
 date: 2018-05-15 12:00:00
 ---
 

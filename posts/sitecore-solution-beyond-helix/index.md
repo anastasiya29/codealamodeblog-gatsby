@@ -7,7 +7,6 @@ tags:
   - Helix
   - Sitecore Tips
 date: 2018-06-01 12:00:00
-featuredImage: sitecore_instance_organization_website.png
 ---
 
 [[snippet]]

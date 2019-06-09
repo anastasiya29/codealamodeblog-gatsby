@@ -5,7 +5,6 @@ tags:
   - Coveo
   - indexing
 description: Tutorial for how to change rendering behavior during crawl time by testing whether the current rendering context was triggered by the Coveo crawler
-featuredImage: uservscrawler.png
 date: 2018-01-21 19:34:44
 ---
 [[snippet]]

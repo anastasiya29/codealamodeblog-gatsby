@@ -5,7 +5,6 @@ tags:
   - Coveo
   - TypeScript
 description: A tutorial for how to extend a Coveo Hive component with extra fields and validation. A tutorial for how to extend Coveo's "Numeric Slider Facet" component to search over multiple fields.
-featuredImage: catfinder_facetsforrange.png
 date: 2018-05-22 12:00:00
 ---
 

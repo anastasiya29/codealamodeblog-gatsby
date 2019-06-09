@@ -5,7 +5,6 @@ tags:
   - architecture
   - multisite
 date: 2018-06-15 12:00:00
-featuredImage: placeholders_shared_small.png
 description: This post describes a small Sitecore customization that enables any page template to bind multiple placeholder settings items to the same placeholder key.
 ---
 

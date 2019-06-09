@@ -7,7 +7,6 @@ tags:
   - DevOps
   - Sitecore module
 date: 2018-06-20 12:00:00
-featuredImage: multiple-sitecore-versions-in-VS2017/sitecore_dotnet_logos.png
 ---
 
 [[snippet]]

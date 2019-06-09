@@ -6,7 +6,6 @@ tags:
 - Sitecore
 - content authoring
 - Sitecore Tips
-featuredImage: treewithlocalandshareddatasources.png
 ---
 
 [[snippet]]

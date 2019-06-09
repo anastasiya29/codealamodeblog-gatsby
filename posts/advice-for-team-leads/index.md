@@ -1,7 +1,6 @@
 ---
 title: Advice for Development Team Leads
 description: This post shares lessons I’ve learned during my experience as dev team lead for software agencies.
-featuredImage: advice-for-team-leads/team.jpg
 tags:
   - career
   - leadership

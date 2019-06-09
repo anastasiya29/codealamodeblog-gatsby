@@ -7,7 +7,6 @@ tags:
   - gulp
   - yarn
 description: A tutorial for how to automate JavaScript bundling in a Sitecore project using yarn and gulp.
-featuredImage: gulp-yarn.png
 date: 2018-01-10 12:00:00
 ---
 

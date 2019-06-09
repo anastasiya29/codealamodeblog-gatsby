@@ -33,14 +33,16 @@ const Container = styled(Flex)`
   }
 `;
 
-const Banner = ({ siteMetadata, pageTitle, pageDescription }) => (
+const Banner = ({ siteMetadata, pageTitle, pageDescription, showDescription }) => (
   <Container>
     <div className="empty-pre"></div>
     <Box p={['1em', '2em', '4em']} className="title">
-      <Heading as="h1" fontSize={[3, 4, 5]} lineHeight={['20px', '24px', '32px']}>
+      <Heading as="h1" fontSize={[2, 3, 4, 5]} lineHeight={['16px', '20px', '24px', '32px']}>
         {pageTitle || siteMetadata.siteTitle}
       </Heading>
-      <p>{pageDescription || siteMetadata.siteDescription}</p>
+      {showDescription && (
+        <p>{pageDescription || siteMetadata.siteDescription}</p>
+      )}
     </Box>
     <div className="empty-post"></div>
   </Container>
@@ -49,9 +51,15 @@ const Banner = ({ siteMetadata, pageTitle, pageDescription }) => (
 Banner.propTypes = {
   siteMetadata: PropTypes.shape({
     siteTitle: PropTypes.string.isRequired,
-    siteDescription: PropTypes.string
+    siteDescription: PropTypes.string.isRequired
   }).isRequired,
-  siteTitle: PropTypes.string
+  pageTitle: PropTypes.string,
+  pageDescription: PropTypes.string,
+  showDescription: PropTypes.bool
+};
+
+Banner.defaultProps = {
+  showDescription: true
 };
 
 export default Banner;

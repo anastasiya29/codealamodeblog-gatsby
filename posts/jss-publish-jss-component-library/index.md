@@ -2,13 +2,13 @@
 title: Sitecore JavaScript Services - How To Publish JSS Components As NPM Packages
 description: This post shares how I published JSS components as an npm package that can be imported into other JSS projects.
 metaDescription: This post shares how I published JSS components as an npm package that can be imported into other JSS projects. This post is part of a series on learning to work with Sitecore JavaScript Services (JSS).
-featuredImage: jss.png
 tags:
   - Sitecore
   - JSS
   - JavaScript
   - react
 date: 2019-03-06 12:00:00
+featuredImage: ./jss.png
 ---
 
 [[snippet]]

@@ -1,7 +1,7 @@
 ---
 title: Why Sitecore Symposium is my favorite conference and why you should apply for the Call For Papers
 description: Sitecore Symposium is one of the few conferences that brings both, developers and business audiences, together, giving us the opportunity to present to and learn from each other.
-featuredImage: sitecore-symposium-cfp/symposium-cfp.png
+featuredImage: ./symposium-cfp.png
 tags:
   - Sitecore
   - SitecoreSYM

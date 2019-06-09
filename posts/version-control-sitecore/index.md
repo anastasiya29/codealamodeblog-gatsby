@@ -7,7 +7,6 @@ tags:
   - DevOps
   - Sitecore Tips
 date: 2018-06-02 12:00:00
-featuredImage: source_control_all_the_things.png
 ---
 
 [[snippet]]

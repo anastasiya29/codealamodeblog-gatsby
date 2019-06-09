@@ -1,22 +1,27 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import styled from 'styled-components';
-import Columns from 'containers/columns';
+import Img from "gatsby-image";
+import ResponsiveColumns from 'containers/responsiveColumns';
 import Card from 'containers/card';
 import Layout from 'components/layout';
-import TopTags from 'components/topTags';
 import Emoji from 'components/emoji';
-import PostTags from './post/postTags';
-import PostBody from './post/postBody.css';
-import PostNavigation from './post/postNavigation.css';
+import TableOfContents from './postPage/tableOfContents';
+import PostTags from './postPage/postTags';
+import PostBody from './postPage/postBody.css';
+import PostNavigation from './postPage/postNavigation.css';
 
-
-const Post = ({ data: { post, left, right } }) => (
-  <Layout pageTitle={post.frontmatter.title} pageDescription={post.frontmatter.description}>
-    <Columns templateColumns="auto 70vw">
-      <TopTags />
+const PostPage = ({ data: { post, left, right } }) => (
+  <Layout
+    pageClassName="postPage"
+    showDescription={false}
+    pageTitle={post.frontmatter.title}
+    pageDescription={post.frontmatter.description}
+    pageImage={post.frontmatter.featuredImage.childImageSharp.fixed.src}>
+    <ResponsiveColumns templateColumns="auto 70vw">
+      <TableOfContents />
       <Card>
         <PostTags tags={post.frontmatter.tags} />
+        <Img fixed={post.frontmatter.featuredImage.childImageSharp.fixed} />
         <PostBody dangerouslySetInnerHTML={{ __html: post.html }} />
         <PostNavigation>
           <div>
@@ -45,7 +50,7 @@ const Post = ({ data: { post, left, right } }) => (
           </div>
         </PostNavigation>
       </Card>
-    </Columns>
+    </ResponsiveColumns>
   </Layout>
 );
 
@@ -58,6 +63,13 @@ export const query = graphql`
         description
         date
         tags
+        featuredImage {
+          childImageSharp {
+            fixed(width: 768) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     },
     left: markdownRemark(fields: { slug: { eq: $left } }) {
@@ -79,4 +91,4 @@ export const query = graphql`
   }
 `;
 
-export default Post;
+export default PostPage;

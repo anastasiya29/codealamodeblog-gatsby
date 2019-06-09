@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from 'rebass';
-import { lightGray } from 'constants/theme';
+import { softGray } from 'constants/theme';
 import styled from 'styled-components';
 
 const Container = styled(Box).attrs({
@@ -9,7 +9,7 @@ const Container = styled(Box).attrs({
 })`
     height: auto;
     border-radius: 7px;
-    border: ${lightGray} solid 1px;
+    border: ${softGray} solid 1px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.25s;
     &:first-of-type {

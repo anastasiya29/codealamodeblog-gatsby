@@ -18,6 +18,13 @@ const LISTING_QUERY = graphql`
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

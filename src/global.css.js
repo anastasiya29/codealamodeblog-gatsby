@@ -63,7 +63,7 @@ export default createGlobalStyle`
     color: ${accentTeal};
     text-decoration: none;
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 

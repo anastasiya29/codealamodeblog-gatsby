@@ -1,7 +1,6 @@
 ---
 title: Sitecore JavaScript Services - Customizing Scaffolding of Components
 description: This post explores customizing the `jss scaffold` command. This post is part of a series on learning to work with Sitecore JavaScript Services (JSS).
-featuredImage: jss.png
 tags:
   - Sitecore
   - Sitecore JavaScript Services

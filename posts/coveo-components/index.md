@@ -5,7 +5,6 @@ tags:
   - Coveo
   - TypeScript
 description: An introduction to a new open source project for reusable 'Coveo for Sitecore' components.
-featuredImage: coveo-components/sitecore_coveo_community.png
 date: 2018-07-09 12:00:00
 ---
 

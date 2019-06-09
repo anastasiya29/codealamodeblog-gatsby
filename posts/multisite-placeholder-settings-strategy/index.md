@@ -7,7 +7,6 @@ tags:
   - multisite
   - Sitecore Tips
 date: 2018-06-14 12:00:00
-featuredImage: multisite_placeholders.png
 ---
 
 [[snippet]]
