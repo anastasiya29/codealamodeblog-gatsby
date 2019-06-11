@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { softTeal } from 'constants/theme';
 
-const PostBody = styled.div`
+const BodyContainer = styled.div`
   ul { margin-left: 20px; }
   p ( margin: 1.6em 0; )
   margin-bottom: 10vh;
@@ -19,4 +19,4 @@ const PostBody = styled.div`
   }
 `;
 
-export default PostBody;
+export default BodyContainer;

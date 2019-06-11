@@ -5,7 +5,7 @@ import Head from './head';
 import Header from 'components/header';
 import GlobalStyle from 'global.css.js';
 
-const Layout = ({ data, children, pageTitle, pageDescription, pageClassName, showDescription }) => (
+const Layout = ({ data, children, pageTitle, pageDescription, pageClassName, isPostPage }) => (
   <div className={pageClassName}>
     <GlobalStyle />
     <Head />
@@ -13,7 +13,7 @@ const Layout = ({ data, children, pageTitle, pageDescription, pageClassName, sho
       siteMetadata={data.site.siteMetadata}
       pageTitle={pageTitle}
       pageDescription={pageDescription}
-      showDescription={showDescription} />
+      isPostPage={isPostPage} />
     {children}
   </div>
 );
@@ -23,7 +23,8 @@ Layout.propTypes = {
   data: PropTypes.object.isRequired,
   pageTitle: PropTypes.string,
   pageDescription: PropTypes.string,
-  pageClassName: PropTypes.string
+  pageClassName: PropTypes.string,
+  isPostPage: PropTypes.bool,
 };
 
 const LayoutWithQuery = props => (

@@ -17,6 +17,7 @@ const LISTING_QUERY = graphql`
           }
           frontmatter {
             title
+            tags
             date(formatString: "MMMM DD, YYYY")
             featuredImage {
               childImageSharp {

@@ -18,7 +18,7 @@ const Container = styled(Box).attrs({
 `;
 
 const Card = (props) => (
-    <Container>
+    <Container {...props} >
         {props.children}
     </Container>
 );

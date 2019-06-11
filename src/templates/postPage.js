@@ -1,29 +1,34 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import Img from "gatsby-image";
 import ResponsiveColumns from 'containers/responsiveColumns';
 import Card from 'containers/card';
 import Layout from 'components/layout';
 import Emoji from 'components/emoji';
 import TableOfContents from './postPage/tableOfContents';
-import PostTags from './postPage/postTags';
-import PostBody from './postPage/postBody.css';
-import PostNavigation from './postPage/postNavigation.css';
+import Tag from 'components/tag';
+import BodyContainer from './postPage/bodyContainer.css';
+import NavigationContainer from './postPage/navigationContainer.css';
+import TagsContainer from './postPage/tagsContainer.css';
 
 const PostPage = ({ data: { post, left, right } }) => (
   <Layout
     pageClassName="postPage"
-    showDescription={false}
+    isPostPage={true}
     pageTitle={post.frontmatter.title}
-    pageDescription={post.frontmatter.description}
-    pageImage={post.frontmatter.featuredImage.childImageSharp.fixed.src}>
+    pageDescription={post.frontmatter.description}>
     <ResponsiveColumns templateColumns="auto 70vw">
-      <TableOfContents />
+      <div>
+        {post.frontmatter.date}
+        <TableOfContents />
+      </div>
       <Card>
-        <PostTags tags={post.frontmatter.tags} />
-        <Img fixed={post.frontmatter.featuredImage.childImageSharp.fixed} />
-        <PostBody dangerouslySetInnerHTML={{ __html: post.html }} />
-        <PostNavigation>
+        <TagsContainer>
+          {post.frontmatter.tags.map((tag, i) => (
+            <Tag key={i} tag={tag} />
+          ))}
+        </TagsContainer>
+        <BodyContainer dangerouslySetInnerHTML={{ __html: post.html }} />
+        <NavigationContainer>
           <div>
             {left && (
               <Link to={left.fields.slug}>
@@ -48,7 +53,7 @@ const PostPage = ({ data: { post, left, right } }) => (
               <Link to={right.fields.slug}>{right.frontmatter.title}</Link>
             )}
           </div>
-        </PostNavigation>
+        </NavigationContainer>
       </Card>
     </ResponsiveColumns>
   </Layout>
@@ -61,15 +66,8 @@ export const query = graphql`
       frontmatter {
         title
         description
-        date
+        date(formatString: "MMMM DD, YYYY")
         tags
-        featuredImage {
-          childImageSharp {
-            fixed(width: 768) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
       }
     },
     left: markdownRemark(fields: { slug: { eq: $left } }) {

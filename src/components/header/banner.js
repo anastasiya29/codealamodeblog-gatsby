@@ -2,49 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import BannerImage from '../../../content/images/banner.png';
-import { Flex, Box, Heading } from 'rebass';
+import PostBannerImage from '../../../content/images/postBanner.png';
+import { Box, Heading } from 'rebass';
 import { accentPink, lightestTeal } from 'constants/theme';
 import MEDIA from 'helpers/mediaTemplates';
 
-const Container = styled(Flex)`
-  background-image: url("${BannerImage}");
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: ${({ isPostPage }) => isPostPage ? "10vw auto 10vw" : "10vw auto 50vw"};
+  background-image: url("${({ isPostPage }) => isPostPage ? PostBannerImage : BannerImage}");
   background-size: cover;
   background-position: center center;
   height: 50vh;
   .title {
-    flex-grow: 2;
+    opacity: 0.8;
     justify-self: center;
     align-self: center;
-    max-width: 475px;
     background-color: ${lightestTeal};
     border: ${accentPink} solid 10px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
-    ${MEDIA.MIN_DESKTOP`
-      max-width: 600px;
-    `};
-  }
-  .empty-pre {
-    flex-grow: 0.5;
-    flex-shrink: 2;
-  }
-  .empty-post {
-    flex-grow: 2;
-    flex-shrink: 1;
   }
 `;
 
-const Banner = ({ siteMetadata, pageTitle, pageDescription, showDescription }) => (
-  <Container>
-    <div className="empty-pre"></div>
-    <Box p={['1em', '2em', '4em']} className="title">
-      <Heading as="h1" fontSize={[2, 3, 4, 5]} lineHeight={['16px', '20px', '24px', '32px']}>
+const Banner = ({ siteMetadata, pageTitle, pageDescription, isPostPage }) => (
+  <Container isPostPage={isPostPage}>
+    <div></div>
+    <Box p={['1em', '2em', '3em']} className="title">
+      <Heading as="h1" fontSize={[3, 4, 5]} lineHeight={['20px', '24px', '32px']} mb="10px">
         {pageTitle || siteMetadata.siteTitle}
       </Heading>
-      {showDescription && (
-        <p>{pageDescription || siteMetadata.siteDescription}</p>
-      )}
+      <Box>{pageDescription || siteMetadata.siteDescription}</Box>
     </Box>
-    <div className="empty-post"></div>
+    <div></div>
   </Container>
 );
 

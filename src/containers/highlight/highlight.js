@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-const Highlight = styled.span`
+const Highlight = styled('span').attrs({
+    className: 'highlight'
+})`
     background: ${props => props.backgroundColor};
-    ${({hoverBackgroundColor}) => hoverBackgroundColor && `
+    ${({ hoverBackgroundColor }) => hoverBackgroundColor && `
         &:hover { background: ${hoverBackgroundColor}; }
     `}
     color: white;

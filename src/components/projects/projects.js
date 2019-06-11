@@ -5,7 +5,7 @@ import Card from 'containers/card';
 import { softTeal } from 'constants/theme';
 
 const Row = styled(Box).attrs({
-    p: [10, 20]
+  p: [10, 20]
 })`
   background-color: ${softTeal};
   height: 200px;
@@ -15,12 +15,12 @@ const Row = styled(Box).attrs({
 `;
 
 const Projects = () => (
-    <Row>
-        <Card>jss-sandbox</Card>
-        <Card>yeoman</Card>
-        <Card>shared praceholders</Card>
-        <Card>Coveo</Card>
-    </Row>
+  <Row>
+    <Card>jss-sandbox</Card>
+    <Card>yeoman</Card>
+    <Card>shared praceholders</Card>
+    <Card>Coveo</Card>
+  </Row>
 );
 
 export default Projects;
