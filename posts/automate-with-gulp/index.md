@@ -3,7 +3,6 @@ title: A guide to automating Sitecore development tasks with Gulp
 tags:
   - Sitecore
   - JavaScript
-  - node
   - gulp
   - yarn
 description: A tutorial for how to automate JavaScript bundling in a Sitecore project using yarn and gulp.
@@ -12,9 +11,8 @@ featuredImage: post.png
 ---
 
 > **This post is part of a series**
-> 1. [Node.js for (.NET) Dummies](/Sitecore/Node-js/node-for-dummies/)
-> 2. [A quick-start guide to using Node to bundle JavaScript modules for Sitecore](/Sitecore/Node-js/module-bundling-rollup/)
-> 3. **A guide to automating Sitecore development tasks with Gulp**
+> 1. [A quick-start guide to using Node to bundle JavaScript modules for Sitecore](/Sitecore/Node-js/module-bundling-rollup/)
+> 2. **A guide to automating Sitecore development tasks with Gulp**
 
 [[snippet]]
 | This tutorial is aimed at Sitecore/.NET developers who are new to the node universe. In the [previous post](/Sitecore/Node-js/module-bundling-rollup/) we set up a Sitecore project with 2 renderings that utilized ES6 JavaScript modules. We compiled and bundled the JavaScript modules and their 3rd party dependencies using npm and rollup. Today we will improve our setup by adding automation. We will utilize the following frameworks:

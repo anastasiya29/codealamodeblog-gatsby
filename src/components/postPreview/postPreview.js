@@ -4,11 +4,11 @@ import Img from "gatsby-image";
 import PropTypes from 'prop-types';
 import { accentPink, accentTeal } from 'constants/theme';
 import Highlight from 'containers/highlight';
-import Title from './post/title.css';
-import DetailsContainer from './post/detailsContainer.css';
-import Container from './post/container.css';
+import Title from './title.css';
+import DetailsContainer from './detailsContainer.css';
+import Container from './container.css';
 
-const Post = ({ frontmatter, snippet, fields }) => (
+const PostPreview = ({ frontmatter, snippet, fields }) => (
   <Container>
     <div>
       <Link to={fields.slug}>
@@ -37,7 +37,7 @@ const Post = ({ frontmatter, snippet, fields }) => (
   </Container>
 );
 
-Post.propTypes = {
+PostPreview.propTypes = {
   fields: PropTypes.shape({
     slug: PropTypes.string.isRequired,
   }).isRequired,
@@ -50,4 +50,4 @@ Post.propTypes = {
   snippet: PropTypes.string.isRequired,
 };
 
-export default Post;
+export default PostPreview;

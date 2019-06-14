@@ -13,7 +13,7 @@ featuredImage: post.png
 [[snippet]]
 | > **This post is part of a series**
 | > 1. **Project Organization - Beyond Helix**
-| > 2. ["Sitecore Flow" - The benefits of versioning your Sitecore environments](/Sitecore/DevOps/version-control-sitecore/)
+| > 2. ["Sitecore Flow" - The benefits of versioning your Sitecore environments](/version-control-sitecore/)
 | 
 | This post covers recommendations on how to structure your Sitecore solution to support synchronized environments and quick spin-up of new instances.
 

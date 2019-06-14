@@ -5,7 +5,7 @@ const Emoji = ({ label, symbol }) => (
     <span role="img" aria-label={label}>{symbol}</span>
 );
 
-Emoji.PropTypes = {
+Emoji.propTypes = {
     label: PropTypes.string.isRequired,
     symbol: PropTypes.string.isRequired
 }

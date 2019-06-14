@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from 'components/layout';
+import ResponsiveColumns from 'containers/responsiveColumns';
+import TagsList from 'components/tagsList';
+import Card from 'containers/card';
+import PostPreview from 'components/postPreview';
 
 const Tag = ({ pageContext, data }) => {
   const { tag } = pageContext;
@@ -11,23 +15,19 @@ const Tag = ({ pageContext, data }) => {
     } tagged with "${tag}"`;
 
   return (
-    <Layout pageTitle={tagHeader} pageDescription="">
-      <ul>
-        {edges.map(({ node }) => {
-          const { slug } = node.fields
-          const { title } = node.frontmatter
-          return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      {/*
-                  This links to a page that does not yet exist.
-                  We'll come back to it!
-                */}
-      <Link to="/tags">All tags</Link>
+    <Layout pageTitle={tagHeader} pageDescription=" ">
+      <ResponsiveColumns templateColumns="auto 70vw">
+        <div>
+          <TagsList />
+        </div>
+        <div>
+          {edges.map(({ node }) => (
+            <Card key={node.fields.slug}>
+              <PostPreview {...node} />
+            </Card>
+          ))}
+        </div>
+      </ResponsiveColumns>
     </Layout>
   );
 };
@@ -39,19 +39,7 @@ Tag.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            snippet: PropTypes.string,
-            frontmatter: PropTypes.shape({
-              title: PropTypes.string.isRequired,
-            }),
-            fields: PropTypes.shape({
-              slug: PropTypes.string.isRequired,
-            }),
-          }),
-        }).isRequired
-      ),
+      edges: PropTypes.array.isRequired,
     }),
   }),
 }
@@ -59,7 +47,7 @@ Tag.propTypes = {
 export const query = graphql`
   query($tag: String) {
     allMarkdownRemark(
-      limit: 500
+      limit: 100
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
@@ -72,7 +60,15 @@ export const query = graphql`
           }
           frontmatter {
             title
+            tags
             date(formatString: "MMMM DD, YYYY")
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

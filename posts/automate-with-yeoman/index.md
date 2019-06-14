@@ -3,9 +3,7 @@ title: Automate creation of new Sitecore projects using Yeoman
 tags:
   - Sitecore
   - JavaScript
-  - node
   - yeoman
-  - Visual Studio
 description: A tutorial for how to create a custom Visual Studio solution generator for Sitecore projects using the Node.js framework Yeoman.
 date: 2018-10-27 12:00:00
 featuredImage: ./post.png

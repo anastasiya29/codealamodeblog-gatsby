@@ -1,12 +1,12 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Card from 'containers/card';
-import Post from './post';
+import PostPreview from 'components/postPreview';
 
 const LISTING_QUERY = graphql`
   query PostListingQuery {
     allMarkdownRemark(
-      limit: 5
+      limit: 25
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
@@ -41,7 +41,7 @@ const PostListing = () => (
       render={({ allMarkdownRemark }) => (
         allMarkdownRemark.edges.map(({ node }) => (
           <Card key={node.fields.slug}>
-            <Post {...node} />
+            <PostPreview {...node} />
           </Card>
         ))
       )}

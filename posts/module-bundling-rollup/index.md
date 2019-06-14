@@ -12,7 +12,7 @@ featuredImage: post.png
 
 > **This post is part of a series**
 > 1. **A quick-start guide to using Node to bundle JavaScript modules for Sitecore**
-> 2. [A guide to automating Sitecore development tasks with Gulp](/Sitecore/Node-js/automate-with-gulp/)
+> 2. [A guide to automating Sitecore development tasks with Gulp](/automate-with-gulp/)
 
 [[snippet]]
 | This tutorial is aimed at Sitecore/.NET developers who are new to JavaScript compilation. We will build Sitecore renderings that use JavaScript modules, and learn how to bundle those modules with [rollup](https://rollupjs.org/).

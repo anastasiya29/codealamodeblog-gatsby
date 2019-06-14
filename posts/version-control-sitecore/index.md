@@ -12,7 +12,7 @@ featuredImage: post.png
 
 [[snippet]]
 | > **This post is part of a series**
-| > 1. [Project Organization - Beyond Helix](/Sitecore/DevOps/sitecore-solution-beyond-helix/)
+| > 1. [Project Organization - Beyond Helix](/sitecore-solution-beyond-helix/)
 | > 2. **"Sitecore Flow" - The benefits of versioning your Sitecore environments**
 | 
 | Put aside everything you know about using git because this post explores a completely untraditional method. This method enables you to roll back failed deployments in seconds. Additionally, it automates the clean up of obsolete files.
@@ -31,7 +31,7 @@ There’s another approach to rolling back that saves your site from being down 
 It’s a very simple concept - if you use git to take a snapshot of your sitecore instance after every deployment, then rolling back becomes a matter of checking out the previous commit. So a full rollback can be achieved in seconds.
 
 ## How it works
-Whether we are implementing this for a developer machine or a higher environment like QA, or even PROD, the steps are the same. I will outline a sample setup for a solution that adheres to the Sitecore -> Bedrock -> Helix organization described in the [last post](/Sitecore/DevOps/sitecore-solution-beyond-helix/).
+Whether we are implementing this for a developer machine or a higher environment like QA, or even PROD, the steps are the same. I will outline a sample setup for a solution that adheres to the Sitecore -> Bedrock -> Helix organization described in the [last post](/sitecore-solution-beyond-helix/).
 ![](./sitecore_instance_organization_website2.png)
 
 ### 1. Install Sitecore

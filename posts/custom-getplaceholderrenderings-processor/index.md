@@ -2,7 +2,6 @@
 title: Custom Sitecore pipeline processor to allow dynamically binding multiple placeholder settings items to a single placeholder key
 tags:
   - Sitecore
-  - architecture
   - multisite
 date: 2018-06-15 12:00:00
 description: This post describes a small Sitecore customization that enables any page template to bind multiple placeholder settings items to the same placeholder key.

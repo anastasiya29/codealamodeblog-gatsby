@@ -20,7 +20,7 @@ const ResponsiveColumns = ({ templateColumns, children }) => (
   <Container templateColumns={templateColumns}>{children}</Container>
 );
 
-ResponsiveColumns.PropTypes = {
+ResponsiveColumns.propTypes = {
   templateColumns: PropTypes.string.isRequired,
 };
 

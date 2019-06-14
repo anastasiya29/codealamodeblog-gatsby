@@ -1,7 +1,7 @@
 const path = require('path');
 const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 const { createFilePath } = require(`gatsby-source-filesystem`);
-const { createPosts, createTags } = require('./src/gatsby/pageCreator');
+const { createPosts, createTags } = require('./src/helpers/pageCreator');
 
 exports.onCreateWebpackConfig = ({
   stage,
@@ -39,7 +39,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 };
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
+
+  createRedirect({
+    fromPath: '/tags',
+    toPath: '/',
+    isPermanent: true,
+  });
 
   return new Promise((resolve) => {
     graphql(`

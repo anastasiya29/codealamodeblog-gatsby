@@ -219,6 +219,6 @@ Now that all of our Sitecore items and C# classes are set up, we can add our cus
 
 ## Up Next
 In the next post we will transition to the JavaScript side of customizing Coveo. We will go over how to create a custom TypeScript component that uses lazy loading and extends from Coveo.FacetSlider.
-[Go to Part 2](/Sitecore/Coveo/coveo-custom-slider-facet-pt2/)
+[Go to Part 2](/coveo-custom-slider-facet-pt2/)
 
 Bon Appétit!

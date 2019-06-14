@@ -4,8 +4,7 @@ description: This post describes how to utilize new .NET Core features to build 
 tags:
   - Sitecore
   - .NET Core
-  - DevOps
-  - Sitecore module
+  - Sitecore modules
 date: 2018-06-20 12:00:00
 featuredImage: post.png
 ---

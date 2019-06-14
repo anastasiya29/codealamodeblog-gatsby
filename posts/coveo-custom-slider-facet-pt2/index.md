@@ -10,7 +10,7 @@ featuredImage: ./post.png
 ---
 
 [[snippet]]
-| Today we will finish building a custom Coveo slider facet that filters based on whether the numeric range of a Sitecore item overlaps with the numeric range specified by the user. In [Part 1](/Sitecore/Coveo/coveo-custom-slider-facet-pt1/) we extended an out-of-the-box Hive slider facet with extra fields and validation by creating Sitecore items and code-behind classes for the new rendering and settings. Today we will focus on my favorite part of the customization process - the JavaSript portion.
+| Today we will finish building a custom Coveo slider facet that filters based on whether the numeric range of a Sitecore item overlaps with the numeric range specified by the user. In [Part 1](/coveo-custom-slider-facet-pt1/) we extended an out-of-the-box Hive slider facet with extra fields and validation by creating Sitecore items and code-behind classes for the new rendering and settings. Today we will focus on my favorite part of the customization process - the JavaSript portion.
 ![](./slider_facet_for_range.png)
 
 ## Summary of part 1
@@ -191,7 +191,7 @@ private onFirstQuerySuccess(args: IQuerySuccessEventArgs) {
 ```
 
 ### Putting it all together
-Complete source: [FacetSliderForRange.ts](https://bitbucket.org/anastasiya29/coveo-components/src/master/src/Facet/FacetSliderForRange.ts)
+Complete source: [FacetSliderForRange.ts](https://github.com/anastasiya29/coveo-components/blob/master/src/Facet/FacetSliderForRange.ts)
 
 ## Demo
 Here is the `Slider For Range Facet` in action in my Cat Finder demo site. The strategy of the site search is to match users to organizations rather than cats because the available set of cats is always changing. Each organization maintains listings of cats available for adoption, and each cat is assigned an adoption fee. The `Slider For Range Facet` allows us to filter organizations by fee range eventhough the organizations are associated with multiple different fees. Since the `Slider For Range Facet` inherits from `Coveo.FacetSlider`, it renders with the same CSS classes as the base component, so it leverages the our-of-the-box Coveo styling.
