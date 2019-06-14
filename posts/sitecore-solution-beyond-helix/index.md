@@ -7,6 +7,7 @@ tags:
   - Helix
   - Sitecore Tips
 date: 2018-06-01 12:00:00
+featuredImage: post.png
 ---
 
 [[snippet]]

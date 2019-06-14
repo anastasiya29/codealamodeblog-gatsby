@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - gulp
 date: 2018-10-26 12:00:00
+featuredImage: ./post.png
 ---
 
 [[snippet]]

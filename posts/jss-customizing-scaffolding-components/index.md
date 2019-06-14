@@ -3,10 +3,11 @@ title: Sitecore JavaScript Services - Customizing Scaffolding of Components
 description: This post explores customizing the `jss scaffold` command. This post is part of a series on learning to work with Sitecore JavaScript Services (JSS).
 tags:
   - Sitecore
-  - Sitecore JavaScript Services
+  - JSS
   - JavaScript
   - react
 date: 2019-01-30 12:00:00
+featuredImage: ./post.png
 ---
 
 [[snippet]]
@@ -16,15 +17,15 @@ date: 2019-01-30 12:00:00
 | 
 | When I followed the “Getting Started” guide from JSS Documentation to learn how to create new components, there was one section in the docs that caught my eye:
 | [Your First Component | Sitecore JSS Documentation](https://jss.sitecore.com/docs/getting-started/first-component#scaffolding-a-jss-component)
-| 
-| > Scaffolding a JSS Component
-| > JSS’ sample apps include a script that allows you to easily scaffold new JSS components. The script is run like so:
-| 
-| ```bash
-| jss scaffold <componentname>
-| ```
-| 
-| > This script is a completely customizable boilerplate (\_scripts_scaffold-component.js) if you don't like the default scaffolding conventions. Take it and make it yours!
+
+> Scaffolding a JSS Component
+> JSS’ sample apps include a script that allows you to easily scaffold new JSS components. The script is run like so:
+
+```bash
+jss scaffold <componentname>
+```
+
+> This script is a completely customizable boilerplate (\_scripts_scaffold-component.js) if you don't like the default scaffolding conventions. Take it and make it yours!
 
 My demo site is using React, and by default, this command creates a boilerplate functional component.
 

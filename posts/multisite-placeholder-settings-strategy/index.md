@@ -7,16 +7,18 @@ tags:
   - multisite
   - Sitecore Tips
 date: 2018-06-14 12:00:00
+featuredImage: post.png
 ---
 
+
+> **This post is part of a series**
+> 1. **Structuring placeholder keys and settings in a multi-site Sitecore implementation using out-of-the-box functionality**
+> 2. [Custom pipeline processor to allow dynamically binding multiple placeholder settings items to a single placeholder key](/Sitecore/custom-getplaceholderrenderings-processor/)
+
 [[snippet]]
-| > **This post is part of a series**
-| > 1. **Structuring placeholder keys and settings in a multi-site Sitecore implementation using out-of-the-box functionality**
-| > 2. [Custom pipeline processor to allow dynamically binding multiple placeholder settings items to a single placeholder key](/Sitecore/custom-getplaceholderrenderings-processor/)
-| 
 | A multi-site Sitecore implementation is when multiple different websites are deployed into the same Sitecore instance. Each site has its own unique set of renderings and templates. However, even sites that look and function completely different may still share a common set of generic renderings, like grid structures or an image carousel.
-| 
-| This makes management of placeholder keys and placeholder settings items tricky. We want to reuse the same renderings across multiple sites and page types, but the rules about what can be inserted where vary for different sites. This post goes over how to solve this challenge with a commonly forgotten out-of-the-box Sitecore feature called "Placeholder Overrides".
+
+This makes management of placeholder keys and placeholder settings items tricky. We want to reuse the same renderings across multiple sites and page types, but the rules about what can be inserted where vary for different sites. This post goes over how to solve this challenge with a commonly forgotten out-of-the-box Sitecore feature called "Placeholder Overrides".
 
 ## Solution structure
 A multi-site Sitecore instance usually looks something like this:

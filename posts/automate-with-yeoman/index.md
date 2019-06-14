@@ -8,12 +8,14 @@ tags:
   - Visual Studio
 description: A tutorial for how to create a custom Visual Studio solution generator for Sitecore projects using the Node.js framework Yeoman.
 date: 2018-10-27 12:00:00
+featuredImage: ./post.png
 ---
 
 [[snippet]]
-| Visual Studio solutions for Sitecore projects are quite complex, as there are multiple integration points to manage. Automating the solution setup process accelerates the time it takes to kick off new projects and enforces consistency across the entire development team.
+| Visual Studio solutions for Sitecore projects are quite complex, as there are multiple integration points to manage. Automating the solution setup process accelerates project kick-off and enforces consistency across the development team.
 | 
-| This post demonstrates how to use [Yeoman](http://yeoman.io/) to create a custom Sitecore project generator. With Yeoman, we can create a Sitecore solution template that's source controlled and collectively managed. This allows teams to hit the ground running faster, and when a team does something really cool in their project that everyone likes, they can add it to the template so that everyone can benefit from the learnings and the "company standard" can evolve.
+| This post demonstrates how to use [Yeoman](http://yeoman.io/) to create a custom Sitecore project generator. With Yeoman, we can create a Sitecore solution template that's source controlled and collectively managed.
+This allows teams to hit the ground running faster, and when a team does something really cool in their project that everyone likes, they can add it to the template so that everyone can benefit from the learnings and the "company standard" can evolve.
 
 ## Why use Yeoman?
 Yeoman is specifically a framework for generators, so it provides a set of out-of-the-box functions that are very useful when executing generators. For example, it has functions for prompting the user of your generator for variable values and saving these values to a configuration file on disk. And it has functions for dynamically transforming your project template files when the generator is executed. So if you use Yeoman, then the only thing you have to worry about is maintaining the template files for your project.

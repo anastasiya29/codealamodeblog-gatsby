@@ -7,10 +7,13 @@ tags:
   - DevOps
   - Sitecore module
 date: 2018-06-20 12:00:00
+featuredImage: post.png
 ---
 
 [[snippet]]
-| One of the most important factors in authoring a successful Sitecore Marketplace module is maintaining compatibility with new Sitecore versions. This post goes over how to utilize .NET Core's simplified csproj footprint and implicit package dependency resolution to build your project against multiple Sitecore versions in one step. Automate the dev-ops part of maintaining modules so you can just have fun and focus on the code.
+| One of the most important factors in authoring a successful Sitecore Marketplace module is maintaining compatibility with new Sitecore versions.
+| 
+| This post goes over how to utilize .NET Core's simplified csproj footprint and implicit package dependency resolution to build your project against multiple Sitecore versions in one step. Automate the dev-ops part of maintaining modules so you can just have fun and focus on the code.
 
 [.NET Core](https://github.com/dotnet/core) is the shiny new (open source!) framework from Microsoft. 
 

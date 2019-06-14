@@ -6,6 +6,7 @@ tags:
 - Sitecore
 - content authoring
 - Sitecore Tips
+featuredImage: post.png
 ---
 
 [[snippet]]

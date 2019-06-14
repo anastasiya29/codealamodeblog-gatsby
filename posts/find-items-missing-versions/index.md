@@ -7,6 +7,7 @@ tags:
 - content authoring
 - powershell
 - globalization
+featuredImage: post.png
 ---
 ## The Missing Language Version Problem
 [[snippet]]

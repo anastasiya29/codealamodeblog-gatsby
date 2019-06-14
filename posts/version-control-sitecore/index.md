@@ -7,6 +7,7 @@ tags:
   - DevOps
   - Sitecore Tips
 date: 2018-06-02 12:00:00
+featuredImage: post.png
 ---
 
 [[snippet]]

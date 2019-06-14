@@ -7,12 +7,13 @@ tags:
   - JSS
   - JavaScript
 date: 2019-02-20 12:00:00
+featuredImage: ./post.png
 ---
 
+This post is part of a series - [Sitecore JavaScript Services (JSS) Sandbox](/jss-sandbox/)
+
+## Disconnected vs Connected
 [[snippet]]
-| This post is part of a series - [Sitecore JavaScript Services (JSS) Sandbox](/jss-sandbox/)
-| 
-| ## Disconnected vs Connected
 | Similar to disconnected mode, connected development mode also runs your JSS app on a local server (http://localhost:3000). The difference is that in disconnected mode the app is hydrated with content from yaml/json files, but in connected mode the app is hydrated with content from Sitecore.
 | 
 | To run connected mode, I needed to deploy my app to Sitecore, which did not go smoothly. This post covers the errors I experienced and how I solved them.

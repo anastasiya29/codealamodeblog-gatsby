@@ -5,23 +5,17 @@ date: 2017-12-03 12:00:00
 tags:
 - Sitecore
 - JavaScript
-- node
-- npm
 - rollup
+featuredImage: post.png
 ---
 
-[[snippet]]
-| > **This post is part of a series**
-| > 1. [Node.js for (.NET) Dummies](/Sitecore/Node-js/node-for-dummies/)
-| > 2. **A quick-start guide to using Node to bundle JavaScript modules for Sitecore**
-| > 3. [A guide to automating Sitecore development tasks with Gulp](/Sitecore/Node-js/automate-with-gulp/)
-| 
-| This tutorial is aimed at Sitecore/.NET developers who are new to the node universe. We will build Sitecore renderings that use JavaScript modules, and learn how to get started with the following frameworks:
-| * [npm](https://www.npmjs.com)
-| * [rollup](https://rollupjs.org/)
 
-## Why npm?
-Npm is a package/dependency manager. Think of it like NuGet for your JavaScript. There are other package managers available which use parallelism to speed up package downloads, but npm ships with Node and it's good enough to get us started.
+> **This post is part of a series**
+> 1. **A quick-start guide to using Node to bundle JavaScript modules for Sitecore**
+> 2. [A guide to automating Sitecore development tasks with Gulp](/Sitecore/Node-js/automate-with-gulp/)
+
+[[snippet]]
+| This tutorial is aimed at Sitecore/.NET developers who are new to JavaScript compilation. We will build Sitecore renderings that use JavaScript modules, and learn how to bundle those modules with [rollup](https://rollupjs.org/).
 
 ## Why rollup?
 Rollup is a module bundler that resolves dependencies between modules by using the [ES6 module export](http://exploringjs.com/es6/ch_modules.html) syntax from the latest JavaScript spec. You may have heard of `amd`, `cmd`, and `umd` - these are all specifications for how modules in JavaScript should be defined. They're great, but I like the idea of working with the syntax that's been approved into the language.

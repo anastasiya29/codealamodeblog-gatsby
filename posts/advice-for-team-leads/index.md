@@ -5,10 +5,13 @@ tags:
   - career
   - leadership
 date: 2019-01-02 12:00:00
+featuredImage: post.png
 ---
 
 [[snippet]]
-| This post shares lessons I’ve learned during my experience as dev team lead for software agencies. |My goal is to make other team leads feel more confident in their roles, and to encourage developers who are considering stepping into this position to go ahead and make the leap.
+| This post shares lessons I’ve learned during my experience as dev team lead for software agencies.
+| 
+| My goal is to make other team leads feel more confident in their roles, and to encourage developers who are considering stepping into this position to go ahead and make the leap.
 
 ## My Experience
 I’ve been leading software development teams as Sitecore architect and dev lead for over 3 years. My last team had 9 back-end .NET/Sitecore developers and 2 front-end developers. We were spread out across the globe - the earliest start to the day was GMT+2, and the latest GMT-8. Working in a large, remote team was challenging, but we hit a very ambitious deadline for an enterprise client, which resulted in approval of a big roadmap of follow-up work.

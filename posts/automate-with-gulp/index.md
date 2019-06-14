@@ -8,21 +8,22 @@ tags:
   - yarn
 description: A tutorial for how to automate JavaScript bundling in a Sitecore project using yarn and gulp.
 date: 2018-01-10 12:00:00
+featuredImage: post.png
 ---
 
+> **This post is part of a series**
+> 1. [Node.js for (.NET) Dummies](/Sitecore/Node-js/node-for-dummies/)
+> 2. [A quick-start guide to using Node to bundle JavaScript modules for Sitecore](/Sitecore/Node-js/module-bundling-rollup/)
+> 3. **A guide to automating Sitecore development tasks with Gulp**
+
 [[snippet]]
-| > **This post is part of a series**
-| > 1. [Node.js for (.NET) Dummies](/Sitecore/Node-js/node-for-dummies/)
-| > 2. [A quick-start guide to using Node to bundle JavaScript modules for Sitecore](/Sitecore/Node-js/module-bundling-rollup/)
-| > 3. **A guide to automating Sitecore development tasks with Gulp**
-| 
 | This tutorial is aimed at Sitecore/.NET developers who are new to the node universe. In the [previous post](/Sitecore/Node-js/module-bundling-rollup/) we set up a Sitecore project with 2 renderings that utilized ES6 JavaScript modules. We compiled and bundled the JavaScript modules and their 3rd party dependencies using npm and rollup. Today we will improve our setup by adding automation. We will utilize the following frameworks:
 | * [Yarn](https://yarnpkg.com/)
 | * [Gulp](https://gulpjs.com/)
 
 The files created in this demo can be cloned from [https://github.com/anastasiya29/gulp-yarn-demo](https://github.com/anastasiya29/gulp-yarn-demo)
 
-<div class="desktop-float"><img src="./gulp-yarn.png"/></div>
+![](./gulp-yarn.png)
 
 ## Why yarn?
 Yarn is a package/dependency manager, and it is a replacement to using npm. Think of it like NuGet for your JavaScript, except that it's waaay faster. (How fast? Crazy fast. "Yarn parallelizes operations to maximize resource utilization so install times are faster than ever" -yarnpkg.com) Plus their site is covered in cats. What more do you need?

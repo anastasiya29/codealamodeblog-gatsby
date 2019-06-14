@@ -7,6 +7,7 @@ tags:
 description:
   Four practices all Sitecore Quality Assurance Specialists should follow to ensure correctness and head off bugs early.
 date: 2018-01-30 12:00:00
+featuredImage: post.png
 ---
 
 [[snippet]]

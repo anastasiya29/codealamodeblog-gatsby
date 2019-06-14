@@ -4,7 +4,7 @@ import { softGray } from 'constants/theme';
 import styled from 'styled-components';
 
 const Container = styled(Box).attrs({
-    p: [10, 20],
+    p: [20, 30],
     mb: [40, 50]
 })`
     height: auto;
@@ -18,7 +18,7 @@ const Container = styled(Box).attrs({
 `;
 
 const Card = (props) => (
-    <Container {...props} >
+    <Container>
         {props.children}
     </Container>
 );

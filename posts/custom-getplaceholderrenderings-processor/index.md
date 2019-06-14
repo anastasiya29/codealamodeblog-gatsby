@@ -6,14 +6,15 @@ tags:
   - multisite
 date: 2018-06-15 12:00:00
 description: This post describes a small Sitecore customization that enables any page template to bind multiple placeholder settings items to the same placeholder key.
+featuredImage: post.png
 ---
 
+> **This post is part of a series**
+> 1. [Structuring placeholder keys and settings in a multi-site Sitecore implementation using out-of-the-box functionality](/multisite-placeholder-settings-strategy)
+> 2. **Custom pipeline processor to allow dynamically binding multiple placeholder settings items to a single placeholder key**
+
 [[snippet]]
-| > **This post is part of a series**
-| > 1. [Structuring placeholder keys and settings in a multi-site Sitecore implementation using out-of-the-box functionality](/Sitecore/multisite-placeholder-settings-strategy)
-| > 2. **Custom pipeline processor to allow dynamically binding multiple placeholder settings items to a single placeholder key**
-| 
-| Building upon the Placeholder Overrides functionality described in the [last post](/Sitecore/multisite-placeholder-settings-strategy), this post describes a small customization that enables any page template to bind multiple placeholder settings items to the same placeholder key. This is very useful in multi-site implementations.
+| Building upon the Placeholder Overrides functionality described in the [last post](/multisite-placeholder-settings-strategy), this post describes a small customization that enables any page template to bind multiple placeholder settings items to the same placeholder key. This is very useful in multi-site implementations.
 
 ![](./placeholders_shared.png)
 

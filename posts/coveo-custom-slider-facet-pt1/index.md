@@ -5,11 +5,12 @@ tags:
   - Coveo
 description: A tutorial for how to extend a Coveo Hive component with extra fields and validation. A tutorial for how to extend Coveo's "Numeric Slider Facet" component to search over multiple fields.
 date: 2018-05-15 12:00:00
+featuredImage: ./post.png
 ---
 
 [[snippet]]
 | Today we will build a custom Coveo slider facet that filters based on whether the numeric range of a Sitecore item overlaps with the numeric range specified by the user. We will extend an out-of-the-box Hive rendering with extra fields and validation. This tutorial assumes you know the basics of working with the Coveo for Sitecore Hive framework.
-| ![](./slider_facet_for_range.png)
+![](./slider_facet_for_range.png)
 
 ## Out-of-the-box Coveo Hive
 Coveo for Sitecore is a very feature-rich framework that ships with several configurable facet components for filtering your search results. The out-of-the-box facets support most common use-cases. For example, if our items have a "Price" field, we can use the `Numeric Slider Facet` or `Numeric Range Facet` components to show only the items whose Price value falls within the user-defined range.

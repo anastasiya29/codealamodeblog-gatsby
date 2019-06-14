@@ -7,6 +7,7 @@ tags:
   - JSS
   - JavaScript
 date: 2019-02-08 12:00:00
+featuredImage: ./post.png
 ---
 
 [[snippet]]

@@ -8,6 +8,7 @@ tags:
   - JavaScript
   - react
 date: 2019-02-13 12:00:00
+featuredImage: ./post.png
 ---
 
 [[snippet]]
