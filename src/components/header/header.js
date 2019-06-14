@@ -39,15 +39,14 @@ const Header = (props) => (
         <li>
           <Link to="/about"><Emoji label="happy blushing" symbol="🤗" /> About</Link>
         </li>
-        <li><Emoji label="megaphone" symbol="🔊" /> RSS</li>
+        <li>
+          <a target="_blank" rel="noopener noreferrer" href="/rss.xml">
+            <Emoji label="megaphone" symbol="🔊" /> RSS
+          </a>
+        </li>
       </ul>
     </Nav>
     <Banner {...props} />
-    <Nav>
-      <ul>
-        <li>Twitter</li>
-      </ul>
-    </Nav>
   </AnimatedContainer>
 );
 
