@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Img from "gatsby-image";
 import PropTypes from 'prop-types';
-import { accentPink, accentTeal } from 'constants/theme';
 import Highlight from 'containers/highlight';
 import Title from './title.css';
 import DetailsContainer from './detailsContainer.css';
@@ -24,9 +23,7 @@ const PostPreview = ({ frontmatter, snippet, fields }) => (
       </DetailsContainer>
       <div dangerouslySetInnerHTML={{ __html: snippet }} />
       <Link to={fields.slug}>
-        <Highlight backgroundColor={accentTeal} hoverBackgroundColor={accentPink}>
-          Read More
-          </Highlight>
+        <Highlight>Read More</Highlight>
       </Link>
     </div>
     {frontmatter.featuredImage && (

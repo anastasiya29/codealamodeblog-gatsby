@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { softTeal } from 'constants/theme';
+import Card from 'containers/card';
 
-const BodyContainer = styled.div`
+const PostCard = styled(Card)`
   ul { margin-left: 20px; }
   p ( margin: 1.6em 0; )
   margin-bottom: 10vh;
@@ -19,4 +20,4 @@ const BodyContainer = styled.div`
   }
 `;
 
-export default BodyContainer;
+export default PostCard;

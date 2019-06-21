@@ -5,7 +5,6 @@ import BannerImage from '../../../content/images/banner.png';
 import PostBannerImage from '../../../content/images/postBanner.png';
 import { Box, Heading } from 'rebass';
 import { accentPink, lightestTeal } from 'constants/theme';
-import MEDIA from 'helpers/mediaTemplates';
 
 const Container = styled.div`
   display: grid;
@@ -44,11 +43,11 @@ Banner.propTypes = {
   }).isRequired,
   pageTitle: PropTypes.string,
   pageDescription: PropTypes.string,
-  showDescription: PropTypes.bool
+  isPostPage: PropTypes.bool
 };
 
 Banner.defaultProps = {
-  showDescription: true
+  isPostPage: false
 };
 
 export default Banner;

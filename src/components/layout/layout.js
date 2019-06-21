@@ -5,8 +5,8 @@ import Head from './head';
 import Header from 'components/header';
 import GlobalStyle from 'global.css.js';
 
-const Layout = ({ data, children, pageTitle, pageDescription, pageClassName, isPostPage }) => (
-  <div className={pageClassName}>
+const Layout = ({ data, children, pageTitle, pageDescription, isPostPage }) => (
+  <div>
     <GlobalStyle />
     <Head />
     <Header
@@ -23,7 +23,6 @@ Layout.propTypes = {
   data: PropTypes.object.isRequired,
   pageTitle: PropTypes.string,
   pageDescription: PropTypes.string,
-  pageClassName: PropTypes.string,
   isPostPage: PropTypes.bool,
 };
 

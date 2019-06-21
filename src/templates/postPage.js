@@ -1,62 +1,34 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-import ResponsiveColumns from 'containers/responsiveColumns';
-import Card from 'containers/card';
+import { graphql } from 'gatsby';
 import Layout from 'components/layout';
-import Emoji from 'components/emoji';
+import Navigation from './postPage/navigation';
 import TableOfContents from './postPage/tableOfContents';
-import Tag from 'components/tag';
-import BodyContainer from './postPage/bodyContainer.css';
-import NavigationContainer from './postPage/navigationContainer.css';
-import TagsContainer from './postPage/tagsContainer.css';
+import ResponsiveColumns from 'containers/responsiveColumns';
+import PostColumn from './postPage/postColumn.css';
+import PostCard from './postPage/postCard.css';
 
 const PostPage = ({ data: { post, left, right } }) => (
   <Layout
-    pageClassName="postPage"
     isPostPage={true}
     pageTitle={post.frontmatter.title}
     pageDescription={post.frontmatter.description}>
     <ResponsiveColumns templateColumns="auto 70vw">
       <div>
-        {post.frontmatter.date}
+        In this post
         <TableOfContents />
       </div>
-      <Card>
-        <TagsContainer>
+      <PostColumn>
+        <div className="post-date">{post.frontmatter.date}</div>
+        <div className="post-tags">
           {post.frontmatter.tags.map((tag, i) => (
-            <Tag key={i} tag={tag} />
+            <span key={i}>#{tag}</span>
           ))}
-        </TagsContainer>
-        <BodyContainer dangerouslySetInnerHTML={{ __html: post.html }} />
-        <NavigationContainer>
-          <div>
-            {left && (
-              <Link to={left.fields.slug}>
-                <Emoji label="left" symbol="⬅️" /> Newer
-            </Link>
-            )}
-          </div>
-          <div className="right">
-            {right && (
-              <Link to={right.fields.slug}>
-                Older <Emoji label="right" symbol="➡️" />
-              </Link>
-            )}
-          </div>
-          <div>
-            {left && (
-              <Link to={left.fields.slug}>{left.frontmatter.title}</Link>
-            )}
-          </div>
-          <div className="right">
-            {right && (
-              <Link to={right.fields.slug}>{right.frontmatter.title}</Link>
-            )}
-          </div>
-        </NavigationContainer>
-      </Card>
+        </div>
+        <PostCard className="post-body" m="20px 0" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Navigation left={left} right={right} />
+      </PostColumn>
     </ResponsiveColumns>
-  </Layout>
+  </Layout >
 );
 
 export const query = graphql`

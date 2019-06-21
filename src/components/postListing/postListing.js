@@ -34,19 +34,16 @@ const LISTING_QUERY = graphql`
 `;
 
 const PostListing = () => (
-  <div>
-    Recent Posts
   <StaticQuery
-      query={LISTING_QUERY}
-      render={({ allMarkdownRemark }) => (
-        allMarkdownRemark.edges.map(({ node }) => (
-          <Card key={node.fields.slug}>
-            <PostPreview {...node} />
-          </Card>
-        ))
-      )}
-    />
-  </div>
+    query={LISTING_QUERY}
+    render={({ allMarkdownRemark }) => (
+      allMarkdownRemark.edges.map(({ node }) => (
+        <Card key={node.fields.slug} mb={[40, 50]}>
+          <PostPreview {...node} />
+        </Card>
+      ))
+    )}
+  />
 );
 
 export default PostListing;

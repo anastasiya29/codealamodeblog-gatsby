@@ -1,7 +1,10 @@
 import React from 'react';
+import { Box } from 'rebass';
 
 const TableOfContents = () => (
-    <div>In this post</div>
+  <Box className="post-toc" m="20px 0">
+
+  </Box>
 );
 
 export default TableOfContents;

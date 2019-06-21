@@ -37,7 +37,10 @@ const Index = () => (
           <ProjectList />
         </FlexBox>
       </div>
-      <PostListing />
+      <div>
+        <Heading fontSize={[2, 3, 4]}>Recent Posts</Heading>
+        <PostListing />
+      </div>
     </ResponsiveColumns>
     <IOExample />
   </Layout>

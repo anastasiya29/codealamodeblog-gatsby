@@ -22,7 +22,7 @@ const Tag = ({ pageContext, data }) => {
         </div>
         <div>
           {edges.map(({ node }) => (
-            <Card key={node.fields.slug}>
+            <Card key={node.fields.slug} mb={[40, 50]}>
               <PostPreview {...node} />
             </Card>
           ))}
