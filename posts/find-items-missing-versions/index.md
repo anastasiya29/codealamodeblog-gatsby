@@ -5,7 +5,7 @@ date: 2017-11-16 12:00:00
 tags:
 - Sitecore
 - content authoring
-- powershell
+- PowerShell
 - globalization
 featuredImage: post.png
 ---
