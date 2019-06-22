@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { Box } from 'rebass';
 import MEDIA from 'helpers/mediaTemplates';
 
@@ -11,17 +10,13 @@ const Container = styled(Box).attrs({
   grid-template-columns: unset;
   grid-column-gap: 10px;
   ${MEDIA.MIN_DESKTOP`
-    grid-template-columns: ${props => props.templateColumns};
+    grid-template-columns: auto 70vw;
     grid-column-gap: 20px;
   `};
 `;
 
-const ResponsiveColumns = ({ templateColumns, children }) => (
-  <Container templateColumns={templateColumns}>{children}</Container>
+const ResponsiveColumns = (props) => (
+  <Container {...props}>{props.children}</Container>
 );
-
-ResponsiveColumns.propTypes = {
-  templateColumns: PropTypes.string.isRequired,
-};
 
 export default ResponsiveColumns;

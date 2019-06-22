@@ -26,7 +26,7 @@ const FlexBox = styled.div`
 
 const Index = () => (
   <Layout>
-    <ResponsiveColumns templateColumns="auto 70vw">
+    <ResponsiveColumns>
       <div>
         <FlexBox mb={40}>
           <Heading fontSize={[2, 3, 4]}>Top Tags</Heading>

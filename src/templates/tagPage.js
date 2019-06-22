@@ -16,7 +16,7 @@ const Tag = ({ pageContext, data }) => {
 
   return (
     <Layout pageTitle={tagHeader} pageDescription=" ">
-      <ResponsiveColumns templateColumns="auto 70vw">
+      <ResponsiveColumns>
         <div>
           <TagsList />
         </div>

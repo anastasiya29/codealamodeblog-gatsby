@@ -12,7 +12,7 @@ const PostPage = ({ data: { post, left, right } }) => (
     isPostPage={true}
     pageTitle={post.frontmatter.title}
     pageDescription={post.frontmatter.description}>
-    <ResponsiveColumns templateColumns="auto 70vw">
+    <ResponsiveColumns>
       <div>
         In this post
         <TableOfContents />
