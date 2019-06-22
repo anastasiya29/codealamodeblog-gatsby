@@ -6,10 +6,10 @@ import TagWithCount from 'components/tagWithCount';
 const TAGS_QUERY = graphql`
   query TagsQuery {
     allMarkdownRemark(limit: 100) {
-        group(field: frontmatter___tags) {
-          fieldValue
-          totalCount
-        }
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
     }
   }
 `;
@@ -17,14 +17,16 @@ const TAGS_QUERY = graphql`
 const TagsList = ({ count }) => (
   <StaticQuery
     query={TAGS_QUERY}
-    render={({ allMarkdownRemark }) => (
+    render={({ allMarkdownRemark }) =>
       allMarkdownRemark.group
         .sort((a, b) => b.totalCount - a.totalCount)
         .slice(0, count)
         .map((tag, i) => (
-          <p key={i}><TagWithCount tag={tag} /></p>
+          <p key={i}>
+            <TagWithCount tag={tag} />
+          </p>
         ))
-    )}
+    }
   />
 );
 

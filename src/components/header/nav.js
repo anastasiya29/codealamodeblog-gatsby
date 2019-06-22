@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { accentTeal, lightestTeal, text } from 'constants/theme';
 
@@ -32,8 +33,10 @@ const Container = styled.nav`
   }
 `;
 
-const Nav = ({ children }) => (
-  <Container>{children}</Container>
-);
+const Nav = ({ children }) => <Container>{children}</Container>;
+
+Nav.propTypes = {
+  children: PropTypes.children,
+};
 
 export default Nav;

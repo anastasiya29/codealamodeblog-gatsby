@@ -6,7 +6,9 @@ const Title = styled(Text)`
   font-weight: 600;
   text-transform: uppercase;
   border-bottom: ${accentTeal} 5px solid;
-  &:hover { color: ${accentPink}; }
+  &:hover {
+    color: ${accentPink};
+  }
 `;
 
 export default Title;

@@ -13,7 +13,8 @@ const Layout = ({ data, children, pageTitle, pageDescription, isPostPage }) => (
       siteMetadata={data.site.siteMetadata}
       pageTitle={pageTitle}
       pageDescription={pageDescription}
-      isPostPage={isPostPage} />
+      isPostPage={isPostPage}
+    />
     {children}
   </div>
 );

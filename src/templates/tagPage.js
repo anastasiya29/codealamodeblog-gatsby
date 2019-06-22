@@ -11,8 +11,8 @@ const Tag = ({ pageContext, data }) => {
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-    } tagged with "${tag}"`;
+    totalCount === 1 ? '' : 's'
+  } tagged with "${tag}"`;
 
   return (
     <Layout pageTitle={tagHeader} pageDescription=" ">
@@ -42,7 +42,7 @@ Tag.propTypes = {
       edges: PropTypes.array.isRequired,
     }),
   }),
-}
+};
 
 export const query = graphql`
   query($tag: String) {

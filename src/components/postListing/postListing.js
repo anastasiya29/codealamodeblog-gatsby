@@ -36,13 +36,13 @@ const LISTING_QUERY = graphql`
 const PostListing = () => (
   <StaticQuery
     query={LISTING_QUERY}
-    render={({ allMarkdownRemark }) => (
+    render={({ allMarkdownRemark }) =>
       allMarkdownRemark.edges.map(({ node }) => (
         <Card key={node.fields.slug} mb={[40, 50]}>
           <PostPreview {...node} />
         </Card>
       ))
-    )}
+    }
   />
 );
 

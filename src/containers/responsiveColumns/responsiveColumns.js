@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Box } from 'rebass';
 import MEDIA from 'helpers/mediaTemplates';
@@ -15,8 +16,12 @@ const Container = styled(Box).attrs({
   `};
 `;
 
-const ResponsiveColumns = (props) => (
+const ResponsiveColumns = props => (
   <Container {...props}>{props.children}</Container>
 );
+
+ResponsiveColumns.propTypes = {
+  children: PropTypes.children,
+};
 
 export default ResponsiveColumns;

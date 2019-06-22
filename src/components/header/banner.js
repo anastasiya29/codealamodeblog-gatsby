@@ -8,8 +8,10 @@ import { accentPink, lightestTeal } from 'constants/theme';
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: ${({ isPostPage }) => isPostPage ? "10vw auto 10vw" : "10vw auto 50vw"};
-  background-image: url("${({ isPostPage }) => isPostPage ? PostBannerImage : BannerImage}");
+  grid-template-columns: ${({ isPostPage }) =>
+    isPostPage ? '10vw auto 10vw' : '10vw auto 50vw'};
+  background-image: url("${({ isPostPage }) =>
+    isPostPage ? PostBannerImage : BannerImage}");
   background-size: cover;
   background-position: center center;
   height: 50vh;
@@ -25,29 +27,34 @@ const Container = styled.div`
 
 const Banner = ({ siteMetadata, pageTitle, pageDescription, isPostPage }) => (
   <Container isPostPage={isPostPage}>
-    <div></div>
+    <div />
     <Box p={['1em', '2em', '3em']} className="title">
-      <Heading as="h1" fontSize={[3, 4, 5]} lineHeight={['20px', '24px', '32px']} mb="10px">
+      <Heading
+        as="h1"
+        fontSize={[3, 4, 5]}
+        lineHeight={['20px', '24px', '32px']}
+        mb="10px"
+      >
         {pageTitle || siteMetadata.siteTitle}
       </Heading>
       <Box>{pageDescription || siteMetadata.siteDescription}</Box>
     </Box>
-    <div></div>
+    <div />
   </Container>
 );
 
 Banner.propTypes = {
   siteMetadata: PropTypes.shape({
     siteTitle: PropTypes.string.isRequired,
-    siteDescription: PropTypes.string.isRequired
+    siteDescription: PropTypes.string.isRequired,
   }).isRequired,
   pageTitle: PropTypes.string,
   pageDescription: PropTypes.string,
-  isPostPage: PropTypes.bool
+  isPostPage: PropTypes.bool,
 };
 
 Banner.defaultProps = {
-  isPostPage: false
+  isPostPage: false,
 };
 
 export default Banner;

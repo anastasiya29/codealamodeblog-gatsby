@@ -21,23 +21,33 @@ const AnimatedContainer = posed.div({
   },
 });
 
-const Header = (props) => (
+const Header = props => (
   <AnimatedContainer>
     <Nav>
       <Link to="/">
-        <Text><Emoji label="ice cream" symbol="🍦" /> Code à la Mode Home</Text>
+        <Text>
+          <Emoji label="ice cream" symbol="🍦" /> Code à la Mode Home
+        </Text>
       </Link>
       <ul>
         <li>
-          <Link to="/posts"><Emoji label="brain" symbol="🧠" /> Posts</Link>
+          <Link to="/posts">
+            <Emoji label="brain" symbol="🧠" /> Posts
+          </Link>
         </li>
         <li>
-          <a target="_blank" rel="noopener noreferrer" href="https://noti.st/anastasiyaflynn">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://noti.st/anastasiyaflynn"
+          >
             <Emoji label="microphone" symbol="🎤" /> Presentations
-        </a>
+          </a>
         </li>
         <li>
-          <Link to="/about"><Emoji label="happy blushing" symbol="🤗" /> About</Link>
+          <Link to="/about">
+            <Emoji label="happy blushing" symbol="🤗" /> About
+          </Link>
         </li>
         <li>
           <a target="_blank" rel="noopener noreferrer" href="/rss.xml">

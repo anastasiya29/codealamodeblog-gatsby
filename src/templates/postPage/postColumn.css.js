@@ -6,7 +6,8 @@ const PostColumn = styled.div`
   grid-template-columns: unset;
   grid-column-gap: 10px;
   grid-template-columns: 25% 25% 25% 25%;
-  .post-date, .post-tags {
+  .post-date,
+  .post-tags {
     color: ${gray};
   }
   .post-date {

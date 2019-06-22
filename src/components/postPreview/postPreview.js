@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Img from "gatsby-image";
+import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import Highlight from 'containers/highlight';
 import Title from './title.css';
@@ -11,7 +11,9 @@ const PostPreview = ({ frontmatter, snippet, fields }) => (
   <Container>
     <div>
       <Link to={fields.slug}>
-        <Title my={2} pb={1} as="h2">{frontmatter.title}</Title>
+        <Title my={2} pb={1} as="h2">
+          {frontmatter.title}
+        </Title>
       </Link>
       <DetailsContainer>
         <div>{frontmatter.date}</div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/layout';
 import Navigation from './postPage/navigation';
@@ -11,7 +12,8 @@ const PostPage = ({ data: { post, left, right } }) => (
   <Layout
     isPostPage={true}
     pageTitle={post.frontmatter.title}
-    pageDescription={post.frontmatter.description}>
+    pageDescription={post.frontmatter.description}
+  >
     <ResponsiveColumns>
       <div>
         In this post
@@ -24,12 +26,24 @@ const PostPage = ({ data: { post, left, right } }) => (
             <span key={i}>#{tag}</span>
           ))}
         </div>
-        <PostCard className="post-body" m="20px 0" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <PostCard
+          className="post-body"
+          m="20px 0"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <Navigation left={left} right={right} />
       </PostColumn>
     </ResponsiveColumns>
-  </Layout >
+  </Layout>
 );
+
+PostPage.propTypes = {
+  data: PropTypes.shape({
+    post: PropTypes.object.isRequired,
+    left: PropTypes.object,
+    right: PropTypes.object,
+  }).isRequired,
+};
 
 export const query = graphql`
   query($slug: String!, $left: String, $right: String) {
@@ -41,7 +55,7 @@ export const query = graphql`
         date(formatString: "MMMM DD, YYYY")
         tags
       }
-    },
+    }
     left: markdownRemark(fields: { slug: { eq: $left } }) {
       fields {
         slug
@@ -49,7 +63,7 @@ export const query = graphql`
       frontmatter {
         title
       }
-    },
+    }
     right: markdownRemark(fields: { slug: { eq: $right } }) {
       fields {
         slug
