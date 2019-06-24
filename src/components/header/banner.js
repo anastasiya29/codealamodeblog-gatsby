@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import BannerImage from '../../../content/images/banner.png';
-import PostBannerImage from '../../../content/images/postBanner.png';
+import BasicBanner from '../../../content/images/banners/basicBanner.png';
 import { Box, Heading } from 'rebass';
 import { accentPink, lightestTeal } from 'constants/theme';
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: ${({ isPostPage }) =>
-    isPostPage ? '10vw auto 10vw' : '10vw auto 50vw'};
-  background-image: url("${({ isPostPage }) =>
-    isPostPage ? PostBannerImage : BannerImage}");
+  grid-template-columns: ${({ bannerImage }) =>
+    bannerImage ? '10vw auto 50vw' : '10vw auto 10vw' };
+  background-image: url("${({ bannerImage }) => bannerImage || BasicBanner}");
   background-size: cover;
   background-position: center center;
   height: 50vh;
@@ -25,8 +23,8 @@ const Container = styled.div`
   }
 `;
 
-const Banner = ({ siteMetadata, pageTitle, pageDescription, isPostPage }) => (
-  <Container isPostPage={isPostPage}>
+const Banner = ({ siteMetadata, pageTitle, pageDescription, bannerImage }) => (
+  <Container bannerImage={bannerImage}>
     <div />
     <Box p={['1em', '2em', '3em']} className="title">
       <Heading
@@ -50,11 +48,7 @@ Banner.propTypes = {
   }).isRequired,
   pageTitle: PropTypes.string,
   pageDescription: PropTypes.string,
-  isPostPage: PropTypes.bool,
-};
-
-Banner.defaultProps = {
-  isPostPage: false,
+  bannerImage: PropTypes.string,
 };
 
 export default Banner;

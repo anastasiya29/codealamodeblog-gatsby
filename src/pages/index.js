@@ -8,6 +8,7 @@ import IOExample from 'components/io-example';
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 import { Heading } from 'rebass';
+import BannerImage from '../../content/images/banners/avatarBanner.png';
 
 const FlexBox = styled.div`
   display: flex;
@@ -25,7 +26,7 @@ const FlexBox = styled.div`
 `;
 
 const Index = () => (
-  <Layout>
+  <Layout bannerImage={BannerImage}>
     <ResponsiveColumns>
       <div>
         <FlexBox mb={40}>

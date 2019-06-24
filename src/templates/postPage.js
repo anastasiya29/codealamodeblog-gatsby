@@ -10,7 +10,6 @@ import PostCard from './postPage/postCard.css';
 
 const PostPage = ({ data: { post, left, right } }) => (
   <Layout
-    isPostPage={true}
     pageTitle={post.frontmatter.title}
     pageDescription={post.frontmatter.description}
   >
