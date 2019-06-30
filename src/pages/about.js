@@ -3,54 +3,52 @@ import Layout from 'components/layout';
 import ResponsiveColumns from 'containers/responsiveColumns';
 import styled from 'styled-components';
 import Emoji from 'components/emoji';
+import { SocialIcon } from 'react-social-icons';
+import MEDIA from 'helpers/mediaTemplates';
+import { accentTeal } from 'constants/theme';
 
 const SocialLinks = styled.div`
   display: flex;
-  a {
-    &:before
-      content: "\f099"
-  }
+  flex-direction: row;
+  justify-content: space-between;
+  ${MEDIA.MIN_DESKTOP`
+    flex-direction: column;
+  `};
+`;
+
+const NotistLink = styled.a`
+  background-color: ${accentTeal};
+  border-radius: 30px;
+  padding: 16px 4px;
+  color: white;
+  position: relative;
+  top: 14px;
 `;
 
 const About = () => (
-  <Layout>
+  <Layout pageTitle="About Anastasiya Flynn" pageDescription=" ">
     <ResponsiveColumns>
       <SocialLinks>
-        <a
-          href="https://www.linkedin.com/in/anastasiya-flynn/"
-          className="linkedin"
-          title="LinkedIn"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="https://twitter.com/AnastasiyaFlynn"
-          className="twitter"
-          title="Twitter"
-        >
-          Twitter
-        </a>
-        <a
-          href="https://github.com/anastasiya29/"
-          className="github"
-          title="GitHub"
-        >
-          GitHub
-        </a>
-        <a
-          href="https://github.com/anastasiya29/"
-          className="notist"
-          title="Notist"
-        >
-          Notist
-        </a>
-        <a
-          href="https://github.com/anastasiya29/"
-          className="instagram"
-          title="Instagram"
-        >
-          Instagram
-        </a>
+        <p>
+          <SocialIcon url="https://www.linkedin.com/in/anastasiya-flynn/" />
+        </p>
+        <p>
+          <SocialIcon url="https://twitter.com/AnastasiyaFlynn" />
+        </p>
+        <p>
+          <SocialIcon url="https://github.com/anastasiya29/" />
+        </p>
+        <p>
+          <SocialIcon url="https://instagram.com/anastasiyar29" />
+        </p>
+        <p>
+          <NotistLink
+            href="https://noti.st/anastasiyaflynn"
+            title="Notist"
+          >
+            Notist
+          </NotistLink>
+        </p>
       </SocialLinks>
       <div>
         <p>

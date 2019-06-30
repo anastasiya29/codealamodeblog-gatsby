@@ -1,15 +1,22 @@
 import React from 'react';
-import { Box } from 'rebass';
 import Layout from 'components/layout';
 import ResponsiveColumns from 'containers/responsiveColumns';
 import TutorialCard from 'containers/card/tutorialCard';
 import Emoji from 'components/emoji';
 import BannerImage from '../../content/images/banners/jssBanner.png';
+import { SocialIcon } from 'react-social-icons';
 
 const About = () => (
-  <Layout bannerImage={BannerImage}>
+  <Layout
+    bannerImage={BannerImage}
+    pageTitle="JavaScript Services Sandbox"
+    pageDescription=" "
+  >
     <ResponsiveColumns>
-      <Box>
+      <div>
+        <p>
+          <SocialIcon url="https://github.com/anastasiya29/jss-sandbox" />
+        </p>
         <p>
           I am a Sitecore and JavaScript developer who is currently learning the
           Sitecore JavaScript Services (JSS) SDK. My goal is to build a small
@@ -20,7 +27,7 @@ const About = () => (
         <p>
           A log of my progress and what&quot;s coming up ahead is outlined here.
         </p>
-      </Box>
+      </div>
       <TutorialCard>
         <div className="step active">
           <h2 data-step-id="1">Quick Start</h2>
