@@ -8,7 +8,7 @@ import { accentPink, lightestTeal } from 'constants/theme';
 const Container = styled.div`
   display: grid;
   grid-template-columns: ${({ bannerImage }) =>
-    bannerImage ? '10vw auto 50vw' : '10vw auto 10vw' };
+    bannerImage ? '10vw auto 50vw' : '10vw auto 10vw'};
   background-image: url("${({ bannerImage }) => bannerImage || BasicBanner}");
   background-size: cover;
   background-position: center center;

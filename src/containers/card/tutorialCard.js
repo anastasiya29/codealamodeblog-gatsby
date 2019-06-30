@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Card from './card';
-import { softTeal, accentTeal } from 'constants/theme';
+import { softTeal, accentTeal, gradient } from 'constants/theme';
 
 const TutorialCard = styled(Card)`
   .step {
@@ -11,7 +11,6 @@ const TutorialCard = styled(Card)`
     h2 {
       border-top-right-radius: 7px;
       border-bottom-right-radius: 7px;
-      border: 1px solid ${softTeal};
       margin: 0;
       text-indent: 1em;
       color: ${softTeal};
@@ -40,6 +39,7 @@ const TutorialCard = styled(Card)`
   }
   .step.active h2 {
     background-color: ${softTeal};
+    background: ${gradient};
     color: #fff;
   }
   .step.active h2::before {

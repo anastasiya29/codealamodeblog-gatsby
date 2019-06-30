@@ -5,7 +5,7 @@ import { Box } from 'rebass';
 import MEDIA from 'helpers/mediaTemplates';
 
 const Container = styled(Box).attrs({
-  p: ['2em', '4em'],
+  p: ['2em', '3em', '4em'],
 })`
   display: grid;
   grid-template-columns: unset;
