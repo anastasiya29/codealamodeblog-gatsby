@@ -1,35 +1,19 @@
 import React from 'react';
-import posed from 'react-pose';
 import Nav from './nav';
 import Banner from './banner';
 import { Link } from 'gatsby';
 import { Text } from 'rebass';
 import Emoji from 'components/emoji';
 
-const AnimatedContainer = posed.div({
-  enter: {
-    y: 0,
-    transition: {
-      ease: 'easeInOut',
-    },
-  },
-  exit: {
-    y: '-100%',
-    transition: {
-      ease: 'easeInOut',
-    },
-  },
-});
-
 const Header = props => (
-  <AnimatedContainer>
+  <>
     <Nav>
       <Link to="/">
         <Text>
           <Emoji label="ice cream" symbol="🍦" /> Code à la Mode Home
         </Text>
       </Link>
-      <ul>
+      <ul style={{ paddingLeft: 0 }}>
         <li>
           <Link to="/posts">
             <Emoji label="brain" symbol="🧠" /> Posts
@@ -57,7 +41,7 @@ const Header = props => (
       </ul>
     </Nav>
     <Banner {...props} />
-  </AnimatedContainer>
+  </>
 );
 
 export default Header;
