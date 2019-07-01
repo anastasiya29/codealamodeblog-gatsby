@@ -42,10 +42,7 @@ const About = () => (
           <SocialIcon url="https://instagram.com/anastasiyar29" />
         </p>
         <p>
-          <NotistLink
-            href="https://noti.st/anastasiyaflynn"
-            title="Notist"
-          >
+          <NotistLink href="https://noti.st/anastasiyaflynn" title="Notist">
             Notist
           </NotistLink>
         </p>

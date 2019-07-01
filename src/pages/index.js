@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from 'components/layout';
 import TagsList from 'components/tagsList';
-import PostListing from 'components/postListing';
+import RecentPosts from 'components/recentPosts';
 import ProjectList from 'components/projectList';
 import ResponsiveColumns from 'containers/responsiveColumns';
 import IOExample from 'components/io-example';
@@ -13,7 +13,7 @@ import BannerImage from '../../content/images/banners/avatarBanner.png';
 const FlexBox = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   p {
     margin: 0.4em;
   }
@@ -29,18 +29,20 @@ const Index = () => (
   <Layout bannerImage={BannerImage}>
     <ResponsiveColumns>
       <div>
-        <FlexBox mb={40}>
-          <Heading fontSize={[2, 3, 4]}>Top Tags</Heading>
+        <Heading fontSize={[2, 3, 4]}>Top Tags</Heading>
+        <FlexBox>
           <TagsList count={5} />
         </FlexBox>
+        <Heading fontSize={[2, 3, 4]}>Recent Projects</Heading>
         <FlexBox>
-          <Heading fontSize={[2, 3, 4]}>Recent Projects</Heading>
           <ProjectList />
         </FlexBox>
       </div>
       <div>
-        <Heading fontSize={[2, 3, 4]}>Recent Posts</Heading>
-        <PostListing />
+        <Heading fontSize={[2, 3, 4]} mb={20}>
+          Recent Posts
+        </Heading>
+        <RecentPosts />
       </div>
     </ResponsiveColumns>
     <IOExample />
