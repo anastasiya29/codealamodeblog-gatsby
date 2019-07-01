@@ -43,7 +43,7 @@ const Index = () => (
           Recent Posts
         </Heading>
         <RecentPosts />
-        <Link to="/posts/2" style={{ display: 'block', textAlign: 'center'}}>
+        <Link to="/posts/2" style={{ display: 'block', textAlign: 'center' }}>
           View More Posts
         </Link>
       </div>

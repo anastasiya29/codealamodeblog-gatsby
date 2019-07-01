@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 import { tagSlugGenerator } from 'helpers/tagSlugGenerator';
 import StyledLink from 'components/styledLink';
 import styled from 'styled-components';

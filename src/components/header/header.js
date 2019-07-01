@@ -7,8 +7,12 @@ import Emoji from 'components/emoji';
 const Header = props => (
   <>
     <Nav>
-      <Link to="/"><Emoji label="ice cream" symbol="🍦" /> Home</Link>
-      <Link to="/posts"><Emoji label="brain" symbol="🧠" /> Posts</Link>
+      <Link to="/">
+        <Emoji label="ice cream" symbol="🍦" /> Home
+      </Link>
+      <Link to="/posts">
+        <Emoji label="brain" symbol="🧠" /> Posts
+      </Link>
       <a
         target="_blank"
         rel="noopener noreferrer"

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { accentTeal, softestGray, text, softGray } from 'constants/theme';
+import { accentTeal, softestGray, text } from 'constants/theme';
 
 const Container = styled.nav`
   display: flex;

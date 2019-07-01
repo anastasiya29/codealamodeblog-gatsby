@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { Link } from "gatsby";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Link } from 'gatsby';
 import Emoji from 'components/emoji';
 import styled from 'styled-components';
 
@@ -10,15 +10,10 @@ const Container = styled.div`
 `;
 
 const Pagination = ({ pageInfo }) => {
-  const {
-    currentPage,
-    pageCount,
-    hasNextPage,
-    hasPreviousPage
-  } = pageInfo;
+  const { currentPage, pageCount, hasNextPage, hasPreviousPage } = pageInfo;
 
-  const prevLink = "/posts/" + (currentPage - 1 > 1 ? (currentPage - 1) : "");
-  const nextLink = "/posts/" + (currentPage + 1);
+  const prevLink = '/posts/' + (currentPage - 1 > 1 ? currentPage - 1 : '');
+  const nextLink = '/posts/' + (currentPage + 1);
   const paginationArr = [];
   for (let i = 1; i <= pageCount; i++) {
     paginationArr.push(i);
@@ -32,9 +27,13 @@ const Pagination = ({ pageInfo }) => {
         </Link>
       )}
       {paginationArr.map(page => {
-        return page === currentPage
-          ? (<span key={page}>{page}</span>)
-          : (<Link key={page} to={`/posts/${page}`}>{page}</Link>);
+        return page === currentPage ? (
+          <span key={page}>{page}</span>
+        ) : (
+          <Link key={page} to={`/posts/${page}`}>
+            {page}
+          </Link>
+        );
       })}
       {hasNextPage && (
         <Link to={nextLink} rel="next">
@@ -43,10 +42,10 @@ const Pagination = ({ pageInfo }) => {
       )}
     </Container>
   );
-}
+};
 
 Pagination.propTypes = {
-  pageInfo: PropTypes.object.isRequired
+  pageInfo: PropTypes.object.isRequired,
 };
 
 export default Pagination;

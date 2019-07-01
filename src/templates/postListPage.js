@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/layout';
 import BannerImage from '../../content/images/banners/avatarBanner.png';
@@ -9,7 +10,7 @@ import { Flex } from 'rebass';
 import Pagination from './postListPage/pagination';
 
 const Container = styled(Flex).attrs({
-  width: ['90vw', '70vw']
+  width: ['90vw', '70vw'],
 })`
   display: flex;
   flex-direction: column;
@@ -42,6 +43,14 @@ const PostListPage = ({ data }) => {
       </Container>
     </Layout>
   );
+};
+
+PostListPage.propTypes = {
+  data: PropTypes.shape({
+    totalCount: PropTypes.number,
+    pageInfo: PropTypes.object,
+    edges: PropTypes.object,
+  }).isRequired,
 };
 
 export const query = graphql`

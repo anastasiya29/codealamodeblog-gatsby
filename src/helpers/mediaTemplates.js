@@ -14,31 +14,33 @@ import BREAKPOINTS from 'constants/breakpoints';
 //
 // Edit or add breakpoints inside constants/breakpoints.js
 
-const MEDIA = Object.keys(BREAKPOINTS).reduce((acc, label) => {
-  acc[label] = (...args) => css`
-    @media (max-width: ${BREAKPOINTS[label] / 16}em) {
-      ${css(...args)};
-    }
-  `;
+const MEDIA = Object.keys(BREAKPOINTS).reduce(
+  (acc, label) => {
+    acc[label] = (...args) => css`
+      @media (max-width: ${BREAKPOINTS[label] / 16}em) {
+        ${css(...args)};
+      }
+    `;
 
-  acc[`MIN_${label}`] = (...args) => css`
-    @media (min-width: ${BREAKPOINTS[label] / 16}em) {
-      ${css(...args)};
-    }
-  `;
-
-  return acc;
-}, {
-  LANDSCAPE: (...args) => css`
-    @media (orientation: landscape) {
-      ${css(...args)};
-    }
-  `,
-  PORTRAIT: (...args) => css`
-    @media (orientation: portrait) {
-      ${css(...args)};
-    }
-  `,
-});
+    acc[`MIN_${label}`] = (...args) => css`
+      @media (min-width: ${BREAKPOINTS[label] / 16}em) {
+        ${css(...args)};
+      }
+    `;
+    return acc;
+  },
+  {
+    LANDSCAPE: (...args) => css`
+      @media (orientation: landscape) {
+        ${css(...args)};
+      }
+    `,
+    PORTRAIT: (...args) => css`
+      @media (orientation: portrait) {
+        ${css(...args)};
+      }
+    `,
+  }
+);
 
 export default MEDIA;
