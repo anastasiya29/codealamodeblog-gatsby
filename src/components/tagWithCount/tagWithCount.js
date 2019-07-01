@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { tagSlugGenerator } from 'helpers/tagSlugGenerator';
-import Highlight from 'containers/highlight';
+import StyledLink from 'components/styledLink';
 import styled from 'styled-components';
 import logos from '../../../content/images/logos/logos';
 
@@ -18,15 +18,13 @@ const TagIcon = styled.i`
 `;
 
 const TagWithCount = ({ tag }) => (
-  <Link to={tagSlugGenerator(tag.fieldValue)}>
-    <Highlight>
-      <TagIcon tagName={tag.fieldValue} />
-      {/* eslint-disable-next-line */}
-      {tag.fieldValue} {tag.totalCount !== undefined && (
-        <span>({tag.totalCount})</span>
-      )}
-    </Highlight>
-  </Link>
+  <StyledLink to={tagSlugGenerator(tag.fieldValue)}>
+    <TagIcon tagName={tag.fieldValue} />
+    {/* eslint-disable-next-line */}
+    {tag.fieldValue} {tag.totalCount !== undefined && (
+      <span>({tag.totalCount})</span>
+    )}
+  </StyledLink>
 );
 
 TagWithCount.propTypes = {

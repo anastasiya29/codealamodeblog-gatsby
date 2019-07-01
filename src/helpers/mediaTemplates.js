@@ -28,6 +28,17 @@ const MEDIA = Object.keys(BREAKPOINTS).reduce((acc, label) => {
   `;
 
   return acc;
-}, {});
+}, {
+  LANDSCAPE: (...args) => css`
+    @media (orientation: landscape) {
+      ${css(...args)};
+    }
+  `,
+  PORTRAIT: (...args) => css`
+    @media (orientation: portrait) {
+      ${css(...args)};
+    }
+  `,
+});
 
 export default MEDIA;

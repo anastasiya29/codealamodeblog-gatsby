@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Layout from 'components/layout';
 import TagsList from 'components/tagsList';
 import RecentPosts from 'components/recentPosts';
@@ -43,6 +44,9 @@ const Index = () => (
           Recent Posts
         </Heading>
         <RecentPosts />
+        <Link to="/posts/2" style={{ display: 'block', textAlign: 'center'}}>
+          View More Posts
+        </Link>
       </div>
     </ResponsiveColumns>
     <IOExample />

@@ -5,12 +5,14 @@ import { Box } from 'rebass';
 import MEDIA from 'helpers/mediaTemplates';
 
 const Container = styled(Box).attrs({
-  p: ['2em', '3em', '4em'],
+  p: ['1em', '3em', '4em'],
 })`
-  display: grid;
-  grid-template-columns: unset;
-  grid-column-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   ${MEDIA.MIN_DESKTOP`
+    display: grid;
+    grid-column-gap: 10px;
     grid-template-columns: auto 70vw;
     grid-column-gap: 20px;
   `};

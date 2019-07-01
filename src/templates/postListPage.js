@@ -29,7 +29,7 @@ const PostListPage = ({ data }) => {
     >
       <Container>
         <Card mb={[40, 50]}>
-          <Pagination pageInfo={pageInfo} totalCount={totalCount} />
+          <Pagination pageInfo={pageInfo} />
         </Card>
         {edges.map(({ node }) => (
           <Card key={node.fields.slug} mb={[40, 50]}>
@@ -37,7 +37,7 @@ const PostListPage = ({ data }) => {
           </Card>
         ))}
         <Card>
-          <Pagination pageInfo={pageInfo} totalCount={totalCount} />
+          <Pagination pageInfo={pageInfo} />
         </Card>
       </Container>
     </Layout>

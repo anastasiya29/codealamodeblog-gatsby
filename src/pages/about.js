@@ -23,6 +23,7 @@ const NotistLink = styled.a`
   color: white;
   position: relative;
   top: 14px;
+  font-size: 1.6rem;
 `;
 
 const About = () => (

@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "gatsby";
-import { accentTeal, softTeal, accentPink } from 'constants/theme';
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Emoji from 'components/emoji';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -10,7 +9,7 @@ const Container = styled.div`
   justify-content: space-evenly;
 `;
 
-const Pagination = ({ pageInfo, totalCount }) => {
+const Pagination = ({ pageInfo }) => {
   const {
     currentPage,
     pageCount,
@@ -29,21 +28,17 @@ const Pagination = ({ pageInfo, totalCount }) => {
     <Container>
       {hasPreviousPage && (
         <Link to={prevLink} rel="prev">
-          <span className="prev-arrow">
-            <FaArrowLeft />
-          </span>
+          <Emoji label="left" symbol="⬅️" />
         </Link>
       )}
-      {paginationArr.map(page => (
-        <span key={page} >
-          <Link to={`/posts/${page}`}>{page}</Link>
-        </span>
-      ))}
+      {paginationArr.map(page => {
+        return page === currentPage
+          ? (<span key={page}>{page}</span>)
+          : (<Link key={page} to={`/posts/${page}`}>{page}</Link>);
+      })}
       {hasNextPage && (
         <Link to={nextLink} rel="next">
-          <span className="next-arrow">
-            <FaArrowRight />
-          </span>
+          <Emoji label="right" symbol="➡️" />
         </Link>
       )}
     </Container>

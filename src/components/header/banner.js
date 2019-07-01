@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import BasicBanner from '../../../content/images/banners/basicBanner.png';
 import { Box, Heading } from 'rebass';
 import { accentPink, lightestTeal } from 'constants/theme';
+import MEDIA from 'helpers/mediaTemplates';
 
 const Container = styled.div`
   display: grid;
@@ -12,7 +13,7 @@ const Container = styled.div`
   background-image: url("${({ bannerImage }) => bannerImage || BasicBanner}");
   background-size: cover;
   background-position: center center;
-  height: 50vh;
+  height: 30vh;
   .title {
     opacity: 0.8;
     justify-self: center;
@@ -21,6 +22,12 @@ const Container = styled.div`
     border: ${accentPink} solid 10px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
   }
+  ${MEDIA.MIN_DESKTOP`
+    height: 50vh;
+  `};
+  ${MEDIA.LANDSCAPE`
+    height: 50vh;
+  `};
 `;
 
 const Banner = ({ siteMetadata, pageTitle, pageDescription, bannerImage }) => (
@@ -29,7 +36,7 @@ const Banner = ({ siteMetadata, pageTitle, pageDescription, bannerImage }) => (
     <Box p={['1em', '2em', '3em']} className="title">
       <Heading
         as="h1"
-        fontSize={[3, 4, 5]}
+        fontSize={[2, 4, 5]}
         lineHeight={['20px', '24px', '32px']}
         mb="10px"
       >

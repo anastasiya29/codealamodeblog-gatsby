@@ -2,23 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { accentTeal, lightestTeal, text } from 'constants/theme';
+import MEDIA from 'helpers/mediaTemplates';
 
 const Container = styled.nav`
   display: flex;
   background-color: ${lightestTeal};
-  ul {
-    list-style: none;
-    flex-grow: 3;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    li {
-      & + li {
-        margin-left: 2rem;
-      }
-    }
-  }
+  justify-content: flex-end;
   a {
     padding: 1em;
     transition: color 0.2s ease;
@@ -29,6 +18,10 @@ const Container = styled.nav`
       color: white;
       background-color: ${accentTeal};
       text-decoration: none;
+    }
+
+    &:first-of-type {
+      margin-right: auto;
     }
   }
 `;

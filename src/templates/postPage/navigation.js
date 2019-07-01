@@ -8,22 +8,18 @@ const Navigation = ({ left, right }) => (
     <div className="left">
       {left && (
         <Link to={left.fields.slug}>
-          <Emoji label="left" symbol="⬅️" /> Newer
+          <Emoji label="left" symbol="⬅️" /> Newer<br />
+          {left.frontmatter.title}
         </Link>
       )}
     </div>
     <div className="right">
       {right && (
         <Link to={right.fields.slug}>
-          Older <Emoji label="right" symbol="➡️" />
+          Older <Emoji label="right" symbol="➡️" /><br />
+          {right.frontmatter.title}
         </Link>
       )}
-    </div>
-    <div className="left">
-      {left && <Link to={left.fields.slug}>{left.frontmatter.title}</Link>}
-    </div>
-    <div className="right">
-      {right && <Link to={right.fields.slug}>{right.frontmatter.title}</Link>}
     </div>
   </>
 );

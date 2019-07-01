@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
-import Highlight from 'containers/highlight';
+import StyledLink from 'components/styledLink';
 import Title from './title.css';
 import DetailsContainer from './detailsContainer.css';
 import Container from './container.css';
@@ -24,9 +24,7 @@ const PostPreview = ({ frontmatter, snippet, fields }) => (
         </div>
       </DetailsContainer>
       <div dangerouslySetInnerHTML={{ __html: snippet }} />
-      <Link to={fields.slug}>
-        <Highlight>Read More</Highlight>
-      </Link>
+      <StyledLink to={fields.slug}>Read More</StyledLink>
     </div>
     {frontmatter.featuredImage && (
       <Link to={fields.slug}>

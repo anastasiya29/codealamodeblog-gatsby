@@ -20,6 +20,7 @@ const PostCard = styled(Card)`
   blockquote {
     background: ${softTeal};
     padding: 1em 2em;
+    margin: 1em;
   }
   a:hover {
     text-decoration: underline;

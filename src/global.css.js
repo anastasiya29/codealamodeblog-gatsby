@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { accentTeal } from 'constants/theme';
+import MEDIA from 'helpers/mediaTemplates';
 
 export default createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -31,8 +32,8 @@ export default createGlobalStyle`
 
   body {
     font-family: 'Maven Pro',sans-serif;
-    line-height: 1.6em;
-    font-size: 1.6rem;
+    line-height: 1.4em;
+    font-size: 1rem;
     color: #000;
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
@@ -42,6 +43,11 @@ export default createGlobalStyle`
     -webkit-font-feature-settings: "pnum";
     font-feature-settings: "pnum";
     font-variant-numeric: proportional-nums;
+  }
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    font-size: 0.7em;
   }
 
   blockquote, q {
@@ -91,4 +97,16 @@ export default createGlobalStyle`
   p, ul, ol {
     margin-bottom: 2rem;
   }
+
+  ${MEDIA.MIN_TABLET`
+    body {
+      line-height: 1.6em;
+      font-size: 1.6rem;
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-size: 1em;
+    }
+  `};
 `;

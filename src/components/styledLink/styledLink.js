@@ -1,7 +1,8 @@
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { accentPink, accentTeal } from 'constants/theme';
 
-const Highlight = styled('span').attrs({
+const StyledLink = styled(Link).attrs({
   className: 'highlight',
 })`
   background: ${accentTeal};
@@ -24,4 +25,4 @@ const Highlight = styled('span').attrs({
   white-space: nowrap;
 `;
 
-export default Highlight;
+export default StyledLink;
