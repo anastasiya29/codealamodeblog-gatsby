@@ -1,7 +1,7 @@
 const path = require('path');
 const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 const { createFilePath } = require(`gatsby-source-filesystem`);
-const { createPosts, createTags } = require('./src/helpers/pageCreator');
+const { createPosts, createTags, createPostLists } = require('./src/helpers/pageCreator');
 
 exports.onCreateWebpackConfig = ({
   stage,
@@ -52,7 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
+        limit: 200
       ) {
         edges {
           node {
@@ -69,11 +69,13 @@ exports.createPages = ({ graphql, actions }) => {
       // Path to templates
       const postTemplate = path.resolve('./src/templates/postPage.js');
       const tagTemplate = path.resolve('./src/templates/tagPage.js');
+      const postListTemplate = path.resolve('./src/templates/postListPage.js');
       const posts = results.data.allMarkdownRemark.edges;
 
       // Programmatically create pages
       createPosts(posts, createPage, postTemplate);
       createTags(posts, createPage, tagTemplate);
+      createPostLists(posts, createPage, postListTemplate);
       resolve();
     });
   });

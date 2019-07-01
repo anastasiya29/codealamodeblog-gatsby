@@ -4,9 +4,9 @@ import Card from 'containers/card';
 import PostPreview from 'components/postPreview';
 
 const LISTING_QUERY = graphql`
-  query PostListingQuery {
+  query RecentPostsQuery {
     allMarkdownRemark(
-      limit: 25
+      limit: 5
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
@@ -33,7 +33,7 @@ const LISTING_QUERY = graphql`
   }
 `;
 
-const PostListing = () => (
+const RecentPosts = () => (
   <StaticQuery
     query={LISTING_QUERY}
     render={({ allMarkdownRemark }) =>
@@ -46,4 +46,4 @@ const PostListing = () => (
   />
 );
 
-export default PostListing;
+export default RecentPosts;
