@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { accentTeal, lightestTeal, text } from 'constants/theme';
-import MEDIA from 'helpers/mediaTemplates';
+import { accentTeal, softestGray, text, softGray } from 'constants/theme';
 
 const Container = styled.nav`
   display: flex;
-  background-color: ${lightestTeal};
+  background-color: ${softestGray};
   justify-content: flex-end;
   a {
     padding: 1em;

@@ -13,7 +13,7 @@ const TutorialCard = styled(Card)`
       border-bottom-right-radius: 7px;
       margin: 0;
       text-indent: 1em;
-      color: ${softTeal};
+      color: ${accentTeal};
       font-weight: normal;
       font-size: 1.3em;
       margin-left: -1em;

@@ -6,7 +6,7 @@ import Emoji from 'components/emoji';
 import BannerImage from '../../content/images/banners/jssBanner.png';
 import { SocialIcon } from 'react-social-icons';
 
-const About = () => (
+const JssSandbox = () => (
   <Layout
     bannerImage={BannerImage}
     pageTitle="JavaScript Services Sandbox"
@@ -183,4 +183,4 @@ const About = () => (
   </Layout>
 );
 
-export default About;
+export default JssSandbox;

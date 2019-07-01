@@ -36,7 +36,7 @@ const PostListPage = ({ data }) => {
             <PostPreview {...node} />
           </Card>
         ))}
-        <Card>
+        <Card mb={[40, 50]}>
           <Pagination pageInfo={pageInfo} />
         </Card>
       </Container>

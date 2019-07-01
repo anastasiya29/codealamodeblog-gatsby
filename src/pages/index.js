@@ -5,7 +5,6 @@ import TagsList from 'components/tagsList';
 import RecentPosts from 'components/recentPosts';
 import ProjectList from 'components/projectList';
 import ResponsiveColumns from 'containers/responsiveColumns';
-import IOExample from 'components/io-example';
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 import { Heading } from 'rebass';
@@ -49,7 +48,6 @@ const Index = () => (
         </Link>
       </div>
     </ResponsiveColumns>
-    <IOExample />
   </Layout>
 );
 
