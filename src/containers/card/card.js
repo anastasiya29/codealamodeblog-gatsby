@@ -16,7 +16,10 @@ const Container = styled(Box).attrs(props => ({
 const Card = props => <Container {...props}>{props.children}</Container>;
 
 Card.propTypes = {
-  children: PropTypes.children,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export default Card;

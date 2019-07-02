@@ -41,7 +41,7 @@ PostPreview.propTypes = {
   frontmatter: PropTypes.shape({
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
-    featuredImage: PropTypes.string,
+    featuredImage: PropTypes.object,
     tags: PropTypes.arrayOf(PropTypes.string),
   }),
   snippet: PropTypes.string.isRequired,

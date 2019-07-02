@@ -23,7 +23,10 @@ const ResponsiveColumns = props => (
 );
 
 ResponsiveColumns.propTypes = {
-  children: PropTypes.children,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export default ResponsiveColumns;

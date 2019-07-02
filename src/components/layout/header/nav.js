@@ -28,7 +28,10 @@ const Container = styled.nav`
 const Nav = ({ children }) => <Container>{children}</Container>;
 
 Nav.propTypes = {
-  children: PropTypes.children,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export default Nav;

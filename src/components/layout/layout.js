@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import Head from './head';
 import Header from './header';
@@ -12,21 +13,23 @@ const Layout = ({
   bannerImage,
   pageImage,
 }) => (
-  <div>
-    <GlobalStyle />
-    <Head
-      pageTitle={pageTitle}
-      pageDescription={pageDescription}
-      pageImage={pageImage}
-    />
-    <Header
-      pageTitle={pageTitle}
-      pageDescription={pageDescription}
-      bannerImage={bannerImage}
-    />
-    {children}
-    <Footer />
-  </div>
+  <ThemeProvider theme={{}}>
+    <div>
+      <GlobalStyle />
+      <Head
+        pageTitle={pageTitle}
+        pageDescription={pageDescription}
+        pageImage={pageImage}
+      />
+      <Header
+        pageTitle={pageTitle}
+        pageDescription={pageDescription}
+        bannerImage={bannerImage}
+      />
+      {children}
+      <Footer />
+    </div>
+  </ThemeProvider>
 );
 
 Layout.propTypes = {

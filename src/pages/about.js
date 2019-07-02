@@ -30,23 +30,13 @@ const About = () => (
   <Layout pageTitle="About Anastasiya Flynn" pageDescription=" ">
     <ResponsiveColumns>
       <SocialLinks>
-        <p>
-          <SocialIcon url="https://www.linkedin.com/in/anastasiya-flynn/" />
-        </p>
-        <p>
-          <SocialIcon url="https://twitter.com/AnastasiyaFlynn" />
-        </p>
-        <p>
-          <SocialIcon url="https://github.com/anastasiya29/" />
-        </p>
-        <p>
-          <SocialIcon url="https://instagram.com/anastasiyar29" />
-        </p>
-        <p>
-          <NotistLink href="https://noti.st/anastasiyaflynn" title="Notist">
-            Notist
-          </NotistLink>
-        </p>
+        <SocialIcon url="https://www.linkedin.com/in/anastasiya-flynn/" />
+        <SocialIcon url="https://twitter.com/AnastasiyaFlynn" />
+        <SocialIcon url="https://github.com/anastasiya29/" />
+        <SocialIcon url="https://instagram.com/anastasiyar29" />
+        <NotistLink href="https://noti.st/anastasiyaflynn" title="Notist">
+          Notist
+        </NotistLink>
       </SocialLinks>
       <div>
         <p>
