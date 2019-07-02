@@ -6,6 +6,26 @@ import ResponsiveColumns from 'containers/responsiveColumns';
 import TagsList from 'components/tagsList';
 import Card from 'containers/card';
 import PostPreview from 'components/postPreview';
+import styled from 'styled-components';
+import MEDIA from 'helpers/mediaTemplates';
+
+const TagColumn = styled.div`
+  margin-bottom: 20px;
+  ${MEDIA.PHONE`
+    max-height: 225px;
+    overflow: scroll;
+  `};
+
+  ${MEDIA.TABLET`
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 225px;
+    overflow: scroll;
+    p {
+      margin: auto;
+    }
+  `};
+`;
 
 const Tag = ({ pageContext, data }) => {
   const { tag } = pageContext;
@@ -17,9 +37,9 @@ const Tag = ({ pageContext, data }) => {
   return (
     <Layout pageTitle={tagHeader} pageDescription=" ">
       <ResponsiveColumns>
-        <div>
+        <TagColumn>
           <TagsList />
-        </div>
+        </TagColumn>
         <div>
           {edges.map(({ node }) => (
             <Card key={node.fields.slug} mb={[40, 50]}>

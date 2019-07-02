@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Head from './head';
 import Header from './header';
 import Footer from './footer';
-import GlobalStyle from 'global.css.js';
+import './global.css';
 
 const Layout = ({
   children,
@@ -15,7 +15,6 @@ const Layout = ({
 }) => (
   <ThemeProvider theme={{}}>
     <div>
-      <GlobalStyle />
       <Head
         pageTitle={pageTitle}
         pageDescription={pageDescription}

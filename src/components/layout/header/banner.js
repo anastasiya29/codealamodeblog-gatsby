@@ -23,11 +23,22 @@ const Container = styled.div`
     border: ${accentPink} solid 10px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
   }
+  .page-description {
+    display: none;
+  }
   ${MEDIA.MIN_DESKTOP`
     height: 50vh;
   `};
+  ${MEDIA.MIN_TABLET`
+    .page-description {
+      display: initial;
+    }
+  `};
   ${MEDIA.LANDSCAPE`
     height: 50vh;
+    .page-description {
+      display: initial;
+    }
   `};
 `;
 
@@ -43,7 +54,9 @@ const Banner = ({ siteMetadata, pageTitle, pageDescription, bannerImage }) => (
       >
         {pageTitle || siteMetadata.siteTitle}
       </Heading>
-      <Box>{pageDescription || siteMetadata.siteDescription}</Box>
+      <Box className="page-description">
+        {pageDescription || siteMetadata.siteDescription}
+      </Box>
     </Box>
     <div />
   </Container>

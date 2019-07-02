@@ -14,16 +14,18 @@ const SocialLinks = styled.div`
   ${MEDIA.MIN_DESKTOP`
     flex-direction: column;
   `};
+  a {
+    margin-bottom: 10px;
+  }
 `;
 
 const NotistLink = styled.a`
   background-color: ${accentTeal};
   border-radius: 30px;
-  padding: 16px 4px;
+  padding: 14px 4px;
   color: white;
-  position: relative;
-  top: 14px;
   font-size: 1.6rem;
+  width: 43px;
 `;
 
 const About = () => (
