@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import { accentTeal } from 'constants/theme';
-import MEDIA from 'helpers/mediaTemplates';
 
 export default createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -32,8 +31,8 @@ export default createGlobalStyle`
 
   body {
     font-family: 'Maven Pro',sans-serif;
-    line-height: 1.4em;
-    font-size: 1rem;
+    line-height: 1.6em;
+    font-size: 1.6rem;
     color: #000;
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
@@ -87,7 +86,7 @@ export default createGlobalStyle`
   }
 
   :not(pre) > code[class*="language-"] {
-    padding: .1em 0.5em;;
+    padding: .1em 0.5em;
   }
 
   video {
@@ -97,16 +96,4 @@ export default createGlobalStyle`
   p, ul, ol {
     margin-bottom: 2rem;
   }
-
-  ${MEDIA.MIN_TABLET`
-    body {
-      line-height: 1.6em;
-      font-size: 1.6rem;
-    }
-
-    code[class*="language-"],
-    pre[class*="language-"] {
-      font-size: 1em;
-    }
-  `};
 `;

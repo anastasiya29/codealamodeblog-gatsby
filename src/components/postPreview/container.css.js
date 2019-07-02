@@ -10,7 +10,7 @@ const Container = styled.div`
       margin-bottom: 10px;
     }
   `};
-  ${MEDIA.MIN_DESKTOP`
+  ${MEDIA.MIN_TABLET`
     display: grid;
     grid-column-gap: 15px;
     background-image: none;
