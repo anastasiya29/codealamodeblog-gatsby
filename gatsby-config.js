@@ -7,7 +7,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-offline`,
     `gatsby-transformer-json`,
     {
       "resolve": `gatsby-transformer-remark`,
@@ -210,16 +209,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Code à la Mode`,
-        short_name: `Code à la Mode`,
-        start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#fff`,
-        display: `standalone`,
-      },
-    },
+    `gatsby-plugin-offline`,
   ],
 };
