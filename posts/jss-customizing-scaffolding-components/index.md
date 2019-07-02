@@ -7,7 +7,7 @@ tags:
   - JavaScript
   - react
 date: 2019-01-30 12:00:00
-featuredImage: ./post.png
+featuredImage: post.png
 ---
 
 [[snippet]]

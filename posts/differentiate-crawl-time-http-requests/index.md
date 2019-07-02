@@ -5,7 +5,7 @@ tags:
   - Coveo
 description: Tutorial for how to change rendering behavior during crawl time by testing whether the current rendering context was triggered by the Coveo crawler
 date: 2018-01-21 19:34:44
-featuredImage: ./post.png
+featuredImage: post.png
 ---
 [[snippet]]
 | You know how it's super easy to change how a rendering is rendered based on `Sitecore.Context.PageMode`? If you've ever wished there was a similar check available for `PageMode.IsIndexCrawlerCrawling`, then read on.

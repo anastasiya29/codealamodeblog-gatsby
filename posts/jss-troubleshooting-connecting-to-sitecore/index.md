@@ -7,7 +7,7 @@ tags:
   - JSS
   - JavaScript
 date: 2019-02-20 12:00:00
-featuredImage: ./post.png
+featuredImage: post.png
 ---
 
 This post is part of a series - [Sitecore JavaScript Services (JSS) Sandbox](/jss-sandbox/)
