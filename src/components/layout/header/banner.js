@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import BasicBanner from '../../../../content/images/banners/basicBanner.png';
@@ -58,4 +59,20 @@ Banner.propTypes = {
   bannerImage: PropTypes.string,
 };
 
-export default Banner;
+const BannerWithQuery = props => (
+  <StaticQuery
+    query={graphql`
+      query BannerQuery {
+        site {
+          siteMetadata {
+            siteTitle
+            siteDescription
+          }
+        }
+      }
+    `}
+    render={data => <Banner siteMetadata={data.site.siteMetadata} {...props} />}
+  />
+);
+
+export default BannerWithQuery;

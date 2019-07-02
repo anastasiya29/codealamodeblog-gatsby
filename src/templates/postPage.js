@@ -12,6 +12,7 @@ const PostPage = ({ data: { post, left, right } }) => (
   <Layout
     pageTitle={post.frontmatter.title}
     pageDescription={post.frontmatter.description}
+    pageImage={post.frontmatter.featuredImage.childImageSharp.fixed.src}
   >
     <ResponsiveColumns>
       <div>
@@ -53,6 +54,13 @@ export const query = graphql`
         description
         date(formatString: "MMMM DD, YYYY")
         tags
+        featuredImage {
+          childImageSharp {
+            fixed(width: 400) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     }
     left: markdownRemark(fields: { slug: { eq: $left } }) {

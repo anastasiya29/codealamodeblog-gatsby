@@ -1,23 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
 import Head from './head';
 import Header from './header';
 import Footer from './footer';
 import GlobalStyle from 'global.css.js';
 
 const Layout = ({
-  data,
   children,
   pageTitle,
   pageDescription,
   bannerImage,
+  pageImage,
 }) => (
   <div>
     <GlobalStyle />
-    <Head />
+    <Head
+      pageTitle={pageTitle}
+      pageDescription={pageDescription}
+      pageImage={pageImage}
+    />
     <Header
-      siteMetadata={data.site.siteMetadata}
       pageTitle={pageTitle}
       pageDescription={pageDescription}
       bannerImage={bannerImage}
@@ -28,31 +30,11 @@ const Layout = ({
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  data: PropTypes.object.isRequired,
+  children: PropTypes.node,
   pageTitle: PropTypes.string,
   pageDescription: PropTypes.string,
   bannerImage: PropTypes.string,
+  pageImage: PropTypes.string,
 };
 
-const LayoutWithQuery = props => (
-  <StaticQuery
-    query={graphql`
-      query LayoutQuery {
-        site {
-          siteMetadata {
-            siteTitle
-            siteDescription
-          }
-        }
-      }
-    `}
-    render={data => <Layout data={data} {...props} />}
-  />
-);
-
-LayoutWithQuery.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export default LayoutWithQuery;
+export default Layout;
