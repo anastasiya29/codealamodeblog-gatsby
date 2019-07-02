@@ -1,10 +1,10 @@
 <p align="center">
   <a href="https://github.com/fabe/gatsby-universal">
     <img
-      src="https://i.imgur.com/MFWrZSx.png"
-      height="80"
-      alt="gatsby-universal"
-      title="gatsby-universal"
+      src="https://codealamode.blog/blog.png"
+      height="300"
+      alt="codealamode.blog"
+      title="codealamode.blog"
     />
   </a>
 </p>

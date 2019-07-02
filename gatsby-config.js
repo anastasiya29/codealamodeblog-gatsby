@@ -217,7 +217,7 @@ module.exports = {
         short_name: `Code à la Mode`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#16b6c7`,
+        theme_color: `#fff`,
         display: `standalone`,
       },
     },
