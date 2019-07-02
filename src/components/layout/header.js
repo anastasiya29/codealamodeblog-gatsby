@@ -1,6 +1,6 @@
 import React from 'react';
-import Nav from './nav';
-import Banner from './banner';
+import Nav from './header/nav';
+import Banner from './header/banner';
 import { Link } from 'gatsby';
 import Emoji from 'components/emoji';
 

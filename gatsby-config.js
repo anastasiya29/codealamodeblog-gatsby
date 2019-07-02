@@ -210,5 +210,16 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Code à la Mode`,
+        short_name: `Code à la Mode`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#16b6c7`,
+        display: `standalone`,
+      },
+    },
   ],
 };

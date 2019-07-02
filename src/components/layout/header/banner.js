@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import BasicBanner from '../../../content/images/banners/basicBanner.png';
+import BasicBanner from '../../../../content/images/banners/basicBanner.png';
 import { Box, Heading } from 'rebass';
 import { accentPink, softestGray } from 'constants/theme';
 import MEDIA from 'helpers/mediaTemplates';
