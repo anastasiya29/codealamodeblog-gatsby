@@ -273,10 +273,10 @@ $ ./node_modules/.bin/rollup -c
 ...and checkout the `bundle.min.js` that was produced. It contains our external dependencies and our custom modules, so the Sitecore Layout file only needs to reference this single file. Having a single file is great because you can minify it and serve the whole thing through a CDN to get really optimized page load times. (And yes, rollup has a minification plugin, but we're not covering that in this demo).
 
 Publish the "Node Page" from earlier and open it in frontend mode.
-![Node Page front-end](./frontend.png)
+![](./frontend.png)
 
-Go to "inspect element" and checkout the list of JavaScript files loaded on the page. It's a small handful of files, just our custom stuff and the external libraries that we used. Compare that to the dozens of modules in your node_modules folder. None of that server-side bulk is carried over to the front-end bundle. That's pretty cool!
-![Front-end sources](./frontend_sources.png)
+Go to "inspect element" and checkout the list of JavaScript files loaded on the page. It's a small handful of files, just our custom stuff and the external libraries that we used. Compare that to the dozens of modules in your `node_modules` folder. None of that server-side bulk is carried over to the front-end bundle. That's pretty cool!
+![](./frontend_sources.png)
 
 ## Up Next
 In the next post I will add a task manager to our stack to automate tasks like minimizing for production and pushing code changes into the local Sitecore instance.

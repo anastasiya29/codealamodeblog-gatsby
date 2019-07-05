@@ -386,8 +386,8 @@ events.js:183
 Error: Could not find matching close tag for "<%".
 ```
 
-My recommendation for troubleshooting this is to go into the source of the EJS node module (it's located @ /node_modules/esj/lib/esj.js), find the `generateSource` function, add a variable that holds the name of the filename being processed, and then add this filename to the error message. Be aware that these changes will get blown away if you ever update your version of EJS or reinstall your node modules, but for debugging I found this quick and dirty trick to work great.
-![ejs.js](./ejs_show_filename_on_error.png)
+My recommendation for troubleshooting this is to go into the source of the EJS node module (it's located in `/node_modules/esj/lib/esj.js`), find the `generateSource` function, add a variable that holds the name of the filename being processed, and then add this filename to the error message. Be aware that these changes will get blown away if you ever update your version of EJS or reinstall your node modules, but for debugging I found this quick and dirty trick to work great.
+![](./ejs_show_filename_on_error.png)
 
 If you find that the problem is bad EJS syntax, then this is easy to fix. But if the problem is a media file like I mentioned above, my work around is to pull those files out into a folder that's not processed by EJS. For example, my generator content includes a Nuget.exe file, and this was crashing the EJS step. So I moved this files to a folder that's not covered by EJS, and then added a step to my writing function to copy this file using `fs.copy`, which does not do EJS transforms.
 ![](./nugetexe.png)

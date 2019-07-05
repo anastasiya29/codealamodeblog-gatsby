@@ -49,6 +49,8 @@ Checkout a new branch called `bedrock`. Deploy the Bedrock project (this contain
 ### 5. Take a snapshot of your custom solution
 Finally, checkout a new branch called `project`. Deploy your custom solution and commit all the files that were added or updated to the new branch.
 
+![](./source_control_all_the_things.png)
+
 ### 6. Manage upgrades
 From here on out, all upgrades to Sitecore, the third party modules, or your custom solution should be done on their respective branches. `sitecore` branch should always be merged into `bedrock`. And `bedrock` branch should always be merged into `project`. 
 

@@ -28,68 +28,52 @@ From the docs:
 ## What data does the manifest create?
 If the goal of the manifest is to model Sitecore data, and to ultimately generate Sitecore items, then it helps to understand what the target end-goal looks like.
 
-{% raw %}
 <div style="display: inline-grid;grid-template-columns:2fr 1fr">
-<div>
-<p>
-I will use a made-up, simple website as an example to explain the relevant concepts.
-</p>
-<p>
-This site has a home page, an article listing page, and multiple article details pages. The article pages are tagged with arbitrary tags. To render the article details page, the following Sitecore items are needed.
-</p>
+  <div>
+    <p>
+      I will use a made-up, simple website as an example to explain the relevant concepts.
+    </p>
+    <p>
+      This site has a home page, an article listing page, and multiple article details pages. The article pages are tagged with arbitrary tags. To render the article details page, the following Sitecore items are needed.
+    </p>
+  </div>
+  <img src="./sitecore-tree.png" />
 </div>
-<div>
-<img src="./sitecore-tree.png" />
-</div>
-</div>
-{% endraw %}
 
 There are three types of items here.
 
-{% raw %}
 <div style="display: inline-grid;grid-template-columns:2fr 1fr">
-<div>
-<h3>Routes</h3>
-<p>
-In Sitecore terms, these items are “pages” since they can be viewed in browsers using unique URLs. They contain route-level fields, and instructions for how to lay out the route’s components.
-</p>
-<p>
-Site implementations need multiple route types to capture differences in fields and default layout. For example, article route, product route, location route, etc. In Sitecore terms, route types are “templates”.
-</p>
+  <div>
+    <h3>Routes</h3>
+    <p>
+      In Sitecore terms, these items are “pages” since they can be viewed in browsers using unique URLs. They contain route-level fields, and instructions for how to lay out the route’s components.
+    </p>
+    <p>
+      Site implementations need multiple route types to capture differences in fields and default layout. For example, article route, product route, location route, etc. In Sitecore terms, route types are “templates”.
+    </p>
+  </div>
+  <img src="./sitecore-tree-pages.png" />
 </div>
-<div>
-<img src="./sitecore-tree-pages.png" />
-</div>
-</div>
-{% endraw %}
 
-{% raw %}
 <div style="display: inline-grid;grid-template-columns:2fr 1fr">
-<div>
-<h3>Components</h3>
-<p>
-In Sitecore terms, these are “rendering datasources”. They contain component-level fields. These items cannot be viewed in browsers directly because they don’t have any layout data - they are simply building blocks for route presentation.
-</p>
+  <div>
+    <h3>Components</h3>
+    <p>
+      In Sitecore terms, these are “rendering datasources”. They contain component-level fields. These items cannot be viewed in browsers directly because they don’t have any layout data - they are simply building blocks for route presentation.
+    </p>
+  </div>
+  <img src="./sitecore-tree-components.png" />
 </div>
-<div>
-<img src="./sitecore-tree-components.png" />
-</div>
-</div>
-{% endraw %}
 
-{% raw %}
 <div style="display: inline-grid;grid-template-columns:2fr 1fr">
-<div>
-<h3>Arbitrary content items that are not used as pages, nor datasources</h3>
-<p>
-In Sitecore terms, they are referred to as “lookups” or “list items”. These items also cannot be viewed in browsers directly because they don’t have any layout data. They are usually used for restricting values of route-level or component-level fields to a limited set of options.
-</p>
+  <div>
+    <h3>Arbitrary content items that are not used as pages, nor datasources</h3>
+    <p>
+      In Sitecore terms, they are referred to as “lookups” or “list items”. These items also cannot be viewed in browsers directly because they don’t have any layout data. They are usually used for restricting values of route-level or component-level fields to a limited set of options.
+    </p>
+  </div>
+  <img src="./sitecore-tree-content-items.png" />
 </div>
-<div>
-<img src="./sitecore-tree-content-items.png" />
-</div>
-</div>
-{% endraw %}
 
 ## Understanding manifest functions
 Different manifest API functions should be used to create these different types of Sitecore items.
