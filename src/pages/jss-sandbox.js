@@ -68,7 +68,7 @@ const JssSandbox = () => (
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="/Sitecore/JavaScript-Services/jss-customizing-scaffolding-components/"
+              href="/jss-customizing-scaffolding-components/"
             >
               JSS - Customizing Scaffolding of Components
             </a>
@@ -90,7 +90,7 @@ const JssSandbox = () => (
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="/Sitecore/JavaScript-Services/jss-manifest-demystified/"
+              href="/jss-manifest-demystified/"
             >
               JSS - Manifest API Demystified
             </a>
@@ -109,7 +109,7 @@ const JssSandbox = () => (
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="/Sitecore/JavaScript-Services/jss-creating-custom-routes/"
+              href="/jss-creating-custom-routes/"
             >
               JSS - Creating Custom Routes and Displaying Route-Level Fields in
               Components
@@ -134,7 +134,7 @@ const JssSandbox = () => (
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="/Sitecore/JavaScript-Services/jss-troubleshooting-connecting-to-sitecore/"
+              href="/jss-troubleshooting-connecting-to-sitecore/"
             >
               JSS - Troubleshooting Errors of Going Connected
             </a>
@@ -156,7 +156,7 @@ const JssSandbox = () => (
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="/Sitecore/JavaScript-Services/jss-publish-jss-component-library/"
+              href="/jss-publish-jss-component-library/"
             >
               JSS - How to Publish JSS Components as NPM Packages
             </a>
