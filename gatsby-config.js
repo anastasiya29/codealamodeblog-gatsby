@@ -38,6 +38,7 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
+          "gatsby-remark-copy-linked-files",
         ],
       },
     },
