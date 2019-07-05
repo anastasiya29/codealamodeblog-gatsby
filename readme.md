@@ -1,12 +1,9 @@
 <p align="center">
-  <a href="https://github.com/fabe/gatsby-universal">
-    <img
-      src="https://codealamode.blog/blog.png"
-      height="300"
-      alt="codealamode.blog"
-      title="codealamode.blog"
-    />
-  </a>
+  <img
+    src="https://codealamode.blog/blog.png"
+    alt="codealamode.blog"
+    title="codealamode.blog"
+  />
 </p>
 
 <p align="center">
