@@ -1,9 +1,11 @@
 <p align="center">
-  <img
-    src="https://codealamode.blog/blog.png"
-    alt="codealamode.blog"
-    title="codealamode.blog"
-  />
+  <a href="https://codealamode.blog/">
+    <img
+      src="https://codealamode.blog/blog.png"
+      alt="codealamode.blog"
+      title="codealamode.blog"
+    />
+  </a>
 </p>
 
 <p align="center">

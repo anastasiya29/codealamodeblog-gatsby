@@ -4,6 +4,7 @@ import ResponsiveColumns from 'containers/responsiveColumns';
 import TutorialCard from 'containers/card/tutorialCard';
 import Emoji from 'components/emoji';
 import BannerImage from '../../content/images/banners/jssBanner.png';
+import MetaImage from '../../content/images/jss.png';
 import { SocialIcon } from 'react-social-icons';
 
 const JssSandbox = () => (
@@ -11,6 +12,7 @@ const JssSandbox = () => (
     bannerImage={BannerImage}
     pageTitle="JavaScript Services Sandbox"
     pageDescription=" "
+    pageImage={MetaImage}
   >
     <ResponsiveColumns>
       <div>

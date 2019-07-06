@@ -8,7 +8,7 @@ const Header = props => (
   <>
     <Nav>
       <Link to="/">
-        <Emoji label="ice cream" symbol="🍦" /> Home
+        <Emoji label="home" symbol="🏠" /> Home
       </Link>
       <Link to="/posts">
         <Emoji label="brain" symbol="🧠" /> Posts
