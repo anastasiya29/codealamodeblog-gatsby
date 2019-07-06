@@ -17,7 +17,9 @@ const PostPage = ({ data: { post, left, right } }) => (
     <ResponsiveColumns>
       <div>
         In this post
-        <TableOfContents />
+        <TableOfContents
+          dangerouslySetInnerHTML={{ __html: post.tableOfContents }}
+        />
       </div>
       <PostColumn>
         <div className="post-date">{post.frontmatter.date}</div>
@@ -62,6 +64,7 @@ export const query = graphql`
           }
         }
       }
+      tableOfContents
     }
     left: markdownRemark(fields: { slug: { eq: $left } }) {
       fields {
