@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'gatsby';
-import Emoji from 'components/emoji';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -23,7 +22,7 @@ const Pagination = ({ pageInfo }) => {
     <Container>
       {hasPreviousPage && (
         <Link to={prevLink} rel="prev">
-          <Emoji label="left" symbol="⬅️" />
+          &#171;
         </Link>
       )}
       {paginationArr.map(page => {
@@ -37,7 +36,7 @@ const Pagination = ({ pageInfo }) => {
       })}
       {hasNextPage && (
         <Link to={nextLink} rel="next">
-          <Emoji label="right" symbol="➡️" />
+          &#187;
         </Link>
       )}
     </Container>
