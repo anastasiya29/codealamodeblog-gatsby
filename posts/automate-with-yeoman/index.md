@@ -360,7 +360,7 @@ Below is a collection of errors that I ran into while I was building my generato
 
 ### Renaming files at generation-time throws error
 If you are using the gulp-rename module to rename files via `registerTransformStream` and you are see the following error, the solution is to pin your `gulp-rename` version to 1.2.2. The error is caused by incompatibility with the newer `gulp-rename`.
-```
+```bash
 events.js:183
       throw er; // Unhandled 'error' event
       ^
@@ -378,7 +378,7 @@ If you need to use the "<%=" characters in your generator content without this b
 
 ### EJS syntax causes errors at generation-time
 If you encounter an error like this while running your generator, the problem is either that you have a file that uses EJS syntax and the EJS is not properly formatted. Or you have some kind of media file inside your generator content like images, fonts, or executables, and EJS is hiccuping when trying to process these files. Either way, the error message that we get from EJS is frustrating because it doesn't tell you what file it fails on, so it's a nightmare to debug.
-```
+```bash
 events.js:183
       throw er; // Unhandled 'error' event
       ^
@@ -421,7 +421,7 @@ this.fs.copyTpl(this.templatePath(".gitignoretemp"), this.destinationPath(".giti
 
 ### Error when running gulp tasks
 If you encounter the following error when trying to run gulp tasks created by the generator in a terminal, it's most likely not a problem with the generator. You are just missing the gulp command line interface.
-```
+```bash
 error "'gulp' is not recognized as an internal or external command"
 ```
 

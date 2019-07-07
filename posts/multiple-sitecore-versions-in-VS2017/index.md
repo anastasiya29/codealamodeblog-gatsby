@@ -71,7 +71,7 @@ Notice that adding a NuGet reference did not create a package.json file in the p
 .NET Core can target multiple .NET frameworks, but it cannot target multiple versions of a NuGet package. But by compartmentalizing the Sitcore NuGet package version into a variable, we can easily swap this value out through command line.
 
 I added a powershell file in the project root with this content. This builds the solution 3 times using 3 different Sitecore versions.
-```bat
+```powershell
 dotnet build /p:SitecoreVersion=8.0.160115
 dotnet build /p:SitecoreVersion=8.1.160519
 dotnet build /p:SitecoreVersion=8.2.180406
