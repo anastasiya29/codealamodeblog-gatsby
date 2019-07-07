@@ -21,11 +21,8 @@ const Header = props => (
         <Emoji label="microphone" symbol="🎤" /> Talks
       </a>
       <Link to="/about">
-        <Emoji label="happy blushing" symbol="🤗" /> About
+        <Emoji label="happy blushing" symbol="🤗" /> Contact
       </Link>
-      <a target="_blank" rel="noopener noreferrer" href="/rss.xml">
-        <Emoji label="megaphone" symbol="🔊" /> RSS
-      </a>
     </Nav>
     <Banner {...props} />
   </>

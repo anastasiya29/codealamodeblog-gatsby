@@ -1,15 +1,21 @@
 import React from 'react';
-import { Box, Text } from 'rebass';
+import { Link } from 'gatsby';
+import { Flex } from 'rebass';
 import { softestGray } from 'constants/theme';
 
 const Footer = () => (
-  <Box p={[1, 2, 3]} backgroundColor={softestGray}>
-    <Text textAlign="center">
-      © 2018-{new Date().getFullYear()}. All statements and opinions on this
-      site are representative of the author, Anastasiya Flynn, and not her
-      employer.
-    </Text>
-  </Box>
+  <Flex
+    p={[1, 2, 3]}
+    backgroundColor={softestGray}
+    alignItems="center"
+    flexDirection="column"
+  >
+    <span>© 2018-{new Date().getFullYear()} Anastasiya Flynn</span>
+    <Link to="/disclaimer">Disclaimer</Link>
+    <a target="_blank" rel="noopener noreferrer" href="/rss.xml">
+      RSS
+    </a>
+  </Flex>
 );
 
 export default Footer;
