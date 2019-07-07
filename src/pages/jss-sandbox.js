@@ -17,9 +17,7 @@ const JssSandbox = () => (
   >
     <Box p={['1em', '3em', '4em']}>
       <div>
-        <p>
-          <SocialIcon url="https://github.com/anastasiya29/jss-sandbox" />
-        </p>
+        <SocialIcon url="https://github.com/anastasiya29/jss-sandbox" />
         <p>
           I am a Sitecore and JavaScript developer who is currently learning the
           Sitecore JavaScript Services (JSS) SDK. My goal is to build a small
@@ -170,13 +168,11 @@ const JssSandbox = () => (
             Yassss, the fun stuff is next&nbsp;
             <Emoji label="confetti" symbol="🎉" />
           </h2>
-          <p>
-            <ul>
-              <li>Trying out GraphQL</li>
-              <li>Component/animation libraries</li>
-              <li>Adding a theme</li>
-            </ul>
-          </p>
+          <ul>
+            <li>Trying out GraphQL</li>
+            <li>Component/animation libraries</li>
+            <li>Adding a theme</li>
+          </ul>
         </div>
         <div className="step">
           <h2 data-step-id="...">More coming soon!</h2>
