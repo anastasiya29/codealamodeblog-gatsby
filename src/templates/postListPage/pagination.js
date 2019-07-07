@@ -30,7 +30,7 @@ const Pagination = ({ pageInfo }) => {
         return page === currentPage ? (
           <span key={page}>{page}</span>
         ) : (
-          <Link key={page} to={`/posts/${page}`}>
+          <Link key={page} to={`/posts/${page === 1 ? '' : page}`}>
             {page}
           </Link>
         );
