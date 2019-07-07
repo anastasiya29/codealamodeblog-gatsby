@@ -8,8 +8,8 @@ const NotFound = () => (
     metaDescription="Legal disclaimer"
   >
     <p>
-      All statements and opinions on this site are representative of the
-      author, Anastasiya Flynn, and not her employer.
+      All statements and opinions on this site are representative of the author,
+      Anastasiya Flynn, and not her employer.
     </p>
     <p>
       I use imagery of software/framework icons/logos to help users navigate my

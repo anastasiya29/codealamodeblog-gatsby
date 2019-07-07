@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import Emoji from 'components/emoji';
 import { SocialIcon } from 'react-social-icons';
 import MEDIA from 'helpers/mediaTemplates';
-import { accentTeal } from 'constants/theme';
 
 const SocialLinks = styled.div`
   display: flex;
@@ -19,15 +18,6 @@ const SocialLinks = styled.div`
   }
 `;
 
-const NotistLink = styled.a`
-  background-color: ${accentTeal};
-  border-radius: 30px;
-  padding: 14px 4px;
-  color: white;
-  font-size: 1.6rem;
-  width: 43px;
-`;
-
 const About = () => (
   <Layout pageTitle="About Anastasiya Flynn" pageDescription=" ">
     <ResponsiveColumns>
@@ -36,9 +26,6 @@ const About = () => (
         <SocialIcon url="https://twitter.com/AnastasiyaFlynn" />
         <SocialIcon url="https://github.com/anastasiya29/" />
         <SocialIcon url="https://instagram.com/anastasiyar29" />
-        <NotistLink href="https://noti.st/anastasiyaflynn" title="Notist">
-          Notist
-        </NotistLink>
       </SocialLinks>
       <div>
         <p>
