@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from 'components/layout';
 import Navigation from './postPage/navigation';
 import TableOfContents from './postPage/tableOfContents';
-import ResponsiveColumns from 'containers/responsiveColumns';
+import { ResponsiveColumns } from 'containers/responsiveColumns';
 import PostColumn from './postPage/postColumn.css';
 import PostCard from './postPage/postCard.css';
 
@@ -16,7 +16,7 @@ const PostPage = ({ data: { post, newer, older } }) => (
   >
     <ResponsiveColumns p={[0, '3em', '4em']} pb={['2em', '3em', '4em']}>
       <TableOfContents tableOfContents={post.tableOfContents} />
-      <PostColumn>
+      <PostColumn className="wide">
         <div className="post-date">{post.frontmatter.date}</div>
         <div className="post-tags">
           {post.frontmatter.tags.map((tag, i) => (

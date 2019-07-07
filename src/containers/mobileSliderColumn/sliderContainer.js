@@ -5,21 +5,23 @@ import MEDIA from 'helpers/mediaTemplates';
 import { softestGray, softGray } from 'constants/theme';
 
 const SliderOverlay = styled.div`
-  position: fixed;
-  left: 0;
-  top: 0;
-  transform: translate3d(-100vw, 0, 0);
-  width: 100vw;
-  height: 100vh;
-  &.hide {
+  ${MEDIA.PHONE`
+    position: fixed;
+    left: 0;
+    top: 0;
     transform: translate3d(-100vw, 0, 0);
-  }
-  &.show {
-    transform: translate3d(0vw, 0, 0);
-  }
-  z-index: 5;
-  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
-  overflow: scroll;
+    width: 100vw;
+    height: 100vh;
+    &.hide {
+      transform: translate3d(-100vw, 0, 0);
+    }
+    &.show {
+      transform: translate3d(0vw, 0, 0);
+    }
+    z-index: 5;
+    transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+    overflow: scroll;
+  `};
 `;
 
 const Container = styled.div`

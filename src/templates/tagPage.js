@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/layout';
-import ResponsiveColumns from 'containers/responsiveColumns';
+import { ResponsiveColumns, WideColumn } from 'containers/responsiveColumns';
 import MobileSliderColumn from 'containers/mobileSliderColumn';
 import TagsList from 'components/tagsList';
 import Card from 'containers/card';
@@ -21,13 +21,13 @@ const Tag = ({ pageContext, data }) => {
         <MobileSliderColumn>
           <TagsList />
         </MobileSliderColumn>
-        <div className="wide">
+        <WideColumn>
           {edges.map(({ node }) => (
             <Card key={node.fields.slug} mb={[40, 50]}>
               <PostPreview {...node} />
             </Card>
           ))}
-        </div>
+        </WideColumn>
       </ResponsiveColumns>
     </Layout>
   );

@@ -11,9 +11,11 @@ const ResponsiveColumns = styled(Box).attrs(({ p }) => ({
   ${MEDIA.MIN_TABLET`
     flex-direction: row;
     .wide {
-      flex-grow: 3;
+      flex-grow: 2;
     }
   `};
 `;
 
-export default ResponsiveColumns;
+const WideColumn = styled.div({ className: 'wide' });
+
+export { ResponsiveColumns, WideColumn };

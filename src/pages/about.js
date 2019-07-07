@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from 'components/layout';
-import ResponsiveColumns from 'containers/responsiveColumns';
+import { ResponsiveColumns, WideColumn } from 'containers/responsiveColumns';
 import styled from 'styled-components';
 import Emoji from 'components/emoji';
 import { SocialIcon } from 'react-social-icons';
@@ -28,7 +28,7 @@ const About = () => (
         <SocialIcon url="https://github.com/anastasiya29/" />
         <SocialIcon url="https://instagram.com/anastasiyar29" />
       </SocialLinks>
-      <div className="wide">
+      <WideColumn>
         <p>
           I am a JavaScript/front-end Evangelist at Sitecore. I spend my days
           working on various developer community programs - a job that I
@@ -51,7 +51,7 @@ const About = () => (
           <Emoji label="paw prints" symbol="🐾" />
           <Emoji label="sunflower" symbol="🌻" />
         </p>
-      </div>
+      </WideColumn>
     </ResponsiveColumns>
   </Layout>
 );

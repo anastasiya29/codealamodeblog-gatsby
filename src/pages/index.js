@@ -4,7 +4,7 @@ import Layout from 'components/layout';
 import TagsList from 'components/tagsList';
 import RecentPosts from 'components/recentPosts';
 import ProjectList from 'components/projectList';
-import ResponsiveColumns from 'containers/responsiveColumns';
+import { ResponsiveColumns, WideColumn } from 'containers/responsiveColumns';
 import MobileSliderColumn from 'containers/mobileSliderColumn';
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
@@ -39,7 +39,7 @@ const Index = () => (
           <ProjectList />
         </FlexBox>
       </MobileSliderColumn>
-      <div className="wide">
+      <WideColumn>
         <Heading fontSize={[2, 3, 4]} mb={20}>
           Recent Posts
         </Heading>
@@ -47,7 +47,7 @@ const Index = () => (
         <Link to="/posts/2" style={{ display: 'block', textAlign: 'center' }}>
           View More Posts
         </Link>
-      </div>
+      </WideColumn>
     </ResponsiveColumns>
   </Layout>
 );

@@ -5,6 +5,7 @@ import { softestGray, gray, accentTeal } from 'constants/theme';
 import MEDIA from 'helpers/mediaTemplates';
 
 const Container = styled.div`
+  min-width: 25vw;
   .tableOfContents {
     a {
       color: ${gray};
@@ -32,18 +33,18 @@ const Container = styled.div`
   `};
 `;
 
-const TableOfContents = ({ tableOfContents }) => (
-  <Container>
+const TableOfContents = props => (
+  <Container {...props}>
     In this post
     <div
       className="tableOfContents"
-      dangerouslySetInnerHTML={{ __html: tableOfContents }}
+      dangerouslySetInnerHTML={{ __html: props.tableOfContents }}
     />
   </Container>
 );
 
 TableOfContents.propTypes = {
-  tableOfContents: PropTypes.object.isRequired,
+  tableOfContents: PropTypes.string.isRequired,
 };
 
 export default TableOfContents;

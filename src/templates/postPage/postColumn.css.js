@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { gray } from 'constants/theme';
 import MEDIA from 'helpers/mediaTemplates';
+import { WideColumn } from 'containers/responsiveColumns';
 
-const PostColumn = styled.div`
+const PostColumn = styled(WideColumn)`
   .post-date,
   .post-tags {
     color: ${gray};
