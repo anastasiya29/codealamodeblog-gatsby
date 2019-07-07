@@ -55,7 +55,7 @@ gulp-yarn-demo/
 $ npm install --global yarn
 ```
 
-* npm and yarn are both package managers, and you can't use both within the same project. If you've already been using npm to manage dependencies in your project, then reset by deleting the entire "node_modules/" folder.
+* npm and yarn are both package managers, and you can't use both within the same project. If you've already been using npm to manage dependencies in your project, then reset by deleting the entire `node_modules/` folder.
 
 ### Install node dependencies
 * Ensure that your `package.json` specifies the following dependencies and then run `$ yarn install`

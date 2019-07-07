@@ -62,7 +62,7 @@ From this error message, I copied out the certificate thumbprint in the expected
 It’s worth noting that the first time I tried the above command, it failed mysteriously. I didn’t understand why it was failing. As you can see from the error message, the thumbprint that I was sending and the thumbprint it expected appear to match perfectly.
 ![](./certificate-thumbprint-error.png)
 
-To debug this, I used VSCode’s “Find in Folder” feature to find which JSS file throws the error I was seeing (Note: if you don’t see results, check for an exclusion rule for the node_modules directory in settings).
+To debug this, I used VSCode’s “Find in Folder” feature to find which JSS file throws the error I was seeing (Note: if you don’t see results, check for an exclusion rule for the `node_modules` directory in settings).
 ![](./find-in-folder.png)
 
 Using this technique, I found the file that compares the certificate thumbprints, and I added a few `console.log` statements to get a clue on what’s going on.

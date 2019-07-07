@@ -87,7 +87,7 @@ The sub-generator will prompt you for permission to modify "package.config", sel
 *Ta-Da Again!*
 Your solution now has Bootstrap installed.
 * Click refresh in the Task Runner Explorer to load in the new Gulp tasks
-* Run the `vendor-copy` task to copy Bootstrap vendor files from the node_modules folder to the project
+* Run the `vendor-copy` task to copy Bootstrap vendor files from the `node_modules` folder to the project
 * Run the `assets-compile` task to compile Sass files to Css
 * Run the `assets-serve` task to launch a local Webpack server to test the Bootstrap assets locally
 
