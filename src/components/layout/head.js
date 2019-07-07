@@ -9,6 +9,7 @@ const Head = ({
   siteTitle,
   siteDescription,
   siteUrl,
+  metaDescription,
   pageTitle,
   pageDescription,
   themeColor,
@@ -18,7 +19,8 @@ const Head = ({
   canonical = siteUrl + (location.pathname || ''),
 }) => {
   const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle;
-  const description = (pageDescription || '').trim() || siteDescription;
+  const description =
+    metaDescription || (pageDescription || '').trim() || siteDescription;
   const image = siteUrl + (pageImage || '/social.png');
 
   return (
@@ -171,6 +173,7 @@ Head.propTypes = {
   siteDescription: PropTypes.string,
   pageTitle: PropTypes.string,
   pageDescription: PropTypes.string,
+  metaDescription: PropTypes.string,
   siteUrl: PropTypes.string,
   themeColor: PropTypes.string,
   social: PropTypes.objectOf(PropTypes.string),

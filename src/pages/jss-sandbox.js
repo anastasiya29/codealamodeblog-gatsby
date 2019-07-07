@@ -12,6 +12,7 @@ const JssSandbox = () => (
     bannerImage={BannerImage}
     pageTitle="JavaScript Services Sandbox"
     pageDescription=" "
+    metaDescription="A blog series about learning Sitecore JavaScript Services (JSS)"
     pageImage={MetaImage}
   >
     <ResponsiveColumns>

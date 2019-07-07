@@ -11,6 +11,7 @@ const Layout = ({
   children,
   pageTitle,
   pageDescription,
+  metaDescription,
   bannerImage,
   pageImage,
 }) => (
@@ -20,6 +21,7 @@ const Layout = ({
         pageTitle={pageTitle}
         pageDescription={pageDescription}
         pageImage={pageImage}
+        metaDescription={metaDescription}
       />
       <Header
         pageTitle={pageTitle}
@@ -36,6 +38,7 @@ Layout.propTypes = {
   children: PropTypes.node,
   pageTitle: PropTypes.string,
   pageDescription: PropTypes.string,
+  metaDescription: PropTypes.string,
   bannerImage: PropTypes.string,
   pageImage: PropTypes.string,
 };
