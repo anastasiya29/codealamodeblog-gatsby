@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 const SymposiumPromo = () => (
     <StaticQuery
         query={graphql`
-      query {
+      query symposiumPromoQuery {
         file(name: { eq: "symposium_promo" }) {
           childImageSharp {
             fluid(maxWidth: 400) {

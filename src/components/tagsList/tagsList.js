@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import TagWithCount from 'components/tagWithCount';
 
 const TAGS_QUERY = graphql`
-  query TagsQuery {
+  query TagsListQuery {
     allMarkdownRemark(limit: 100) {
       group(field: frontmatter___tags) {
         fieldValue

@@ -1,25 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import Emoji from 'components/emoji';
 
-const Navigation = ({ left, right }) => (
+const Navigation = ({ newer, older }) => (
   <>
     <div className="left">
-      {left && (
-        <Link to={left.fields.slug}>
-          <Emoji label="left" symbol="⬅️" /> Newer
+      {older && (
+        <Link to={older.fields.slug}>
+          &#171; Older
           <br />
-          {left.frontmatter.title}
+          {older.frontmatter.title}
         </Link>
       )}
     </div>
     <div className="right">
-      {right && (
-        <Link to={right.fields.slug}>
-          Older <Emoji label="right" symbol="➡️" />
+      {newer && (
+        <Link to={newer.fields.slug}>
+          Newer &#187;
           <br />
-          {right.frontmatter.title}
+          {newer.frontmatter.title}
         </Link>
       )}
     </div>
@@ -27,12 +26,12 @@ const Navigation = ({ left, right }) => (
 );
 
 Navigation.propTypes = {
-  left: PropTypes.shape({
+  older: PropTypes.shape({
     fields: PropTypes.shape({
       slug: PropTypes.string.isRequired,
     }).isRequired,
   }),
-  right: PropTypes.shape({
+  newer: PropTypes.shape({
     fields: PropTypes.shape({
       slug: PropTypes.string.isRequired,
     }).isRequired,

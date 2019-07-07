@@ -65,7 +65,7 @@ Tag.propTypes = {
 };
 
 export const query = graphql`
-  query($tag: String) {
+  query TagPageQuery($tag: String) {
     allMarkdownRemark(
       limit: 100
       sort: { fields: [frontmatter___date], order: DESC }

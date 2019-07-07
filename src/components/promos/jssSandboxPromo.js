@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 const JSSSandboxPromo = () => (
     <StaticQuery
         query={graphql`
-      query {
+      query jssSandboxPromoQuery {
         file(name: { eq: "jss_sandbox_promo" }) {
           childImageSharp {
             fluid(maxWidth: 400) {

@@ -8,7 +8,7 @@ import ResponsiveColumns from 'containers/responsiveColumns';
 import PostColumn from './postPage/postColumn.css';
 import PostCard from './postPage/postCard.css';
 
-const PostPage = ({ data: { post, left, right } }) => (
+const PostPage = ({ data: { post, newer, older } }) => (
   <Layout
     pageTitle={post.frontmatter.title}
     pageDescription={post.frontmatter.description}
@@ -33,7 +33,7 @@ const PostPage = ({ data: { post, left, right } }) => (
           m="20px 0"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <Navigation left={left} right={right} />
+        <Navigation newer={newer} older={older} />
       </PostColumn>
     </ResponsiveColumns>
   </Layout>
@@ -42,13 +42,13 @@ const PostPage = ({ data: { post, left, right } }) => (
 PostPage.propTypes = {
   data: PropTypes.shape({
     post: PropTypes.object.isRequired,
-    left: PropTypes.object,
-    right: PropTypes.object,
+    newer: PropTypes.object,
+    older: PropTypes.object,
   }).isRequired,
 };
 
 export const query = graphql`
-  query($slug: String!, $left: String, $right: String) {
+  query PostPageQuery($slug: String!, $newer: String, $older: String) {
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -66,7 +66,7 @@ export const query = graphql`
       }
       tableOfContents
     }
-    left: markdownRemark(fields: { slug: { eq: $left } }) {
+    newer: markdownRemark(fields: { slug: { eq: $newer } }) {
       fields {
         slug
       }
@@ -74,7 +74,7 @@ export const query = graphql`
         title
       }
     }
-    right: markdownRemark(fields: { slug: { eq: $right } }) {
+    older: markdownRemark(fields: { slug: { eq: $older } }) {
       fields {
         slug
       }

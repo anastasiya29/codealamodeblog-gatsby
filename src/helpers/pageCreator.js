@@ -9,8 +9,8 @@ const createPosts = (posts, createPage, template) =>
       component: template,
       context: {
         slug: getSlug(post),
-        left: i === 0 ? null : getSlug(posts[i - 1]),
-        right: i === posts.length - 1 ? null : getSlug(posts[i + 1]),
+        newer: i === 0 ? null : getSlug(posts[i - 1]),
+        older: i === posts.length - 1 ? null : getSlug(posts[i + 1]),
       },
     });
   });
