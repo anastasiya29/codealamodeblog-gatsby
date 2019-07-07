@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import { Box } from 'rebass';
 import MEDIA from 'helpers/mediaTemplates';
 
-const Container = styled(Box).attrs({
-  p: ['1em', '3em', '4em'],
-})`
+const Container = styled(Box).attrs(({ p }) => ({
+  p: p || ['1em', '3em', '4em'],
+}))`
   display: flex;
   flex-direction: column;
   align-items: stretch;

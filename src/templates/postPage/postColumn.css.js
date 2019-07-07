@@ -37,6 +37,11 @@ const PostColumn = styled.div`
       text-align: right;
     }
   `};
+  ${MEDIA.PHONE`
+    .left {
+      margin-bottom: 2em;
+    }
+  `};
 `;
 
 export default PostColumn;

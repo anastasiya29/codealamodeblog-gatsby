@@ -14,13 +14,8 @@ const PostPage = ({ data: { post, newer, older } }) => (
     pageDescription={post.frontmatter.description}
     pageImage={post.frontmatter.featuredImage.childImageSharp.fixed.src}
   >
-    <ResponsiveColumns>
-      <div>
-        In this post
-        <TableOfContents
-          dangerouslySetInnerHTML={{ __html: post.tableOfContents }}
-        />
-      </div>
+    <ResponsiveColumns p={[0, '3em', '4em']} pb={['2em', '3em', '4em']}>
+      <TableOfContents tableOfContents={post.tableOfContents} />
       <PostColumn>
         <div className="post-date">{post.frontmatter.date}</div>
         <div className="post-tags">

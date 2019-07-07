@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { softTeal } from 'constants/theme';
 import Card from 'containers/card';
+import MEDIA from 'helpers/mediaTemplates';
 
 const PostCard = styled(Card)`
   ul {
@@ -9,7 +10,6 @@ const PostCard = styled(Card)`
   p {
     margin: 1.6em 0;
   }
-  margin-bottom: 10vh;
   h2,
   h3,
   h4 {
@@ -25,6 +25,11 @@ const PostCard = styled(Card)`
   a:hover {
     text-decoration: underline;
   }
+  ${MEDIA.PHONE`
+    border: none;
+    box-shadow: none;
+    padding: 0 20px;
+  `};
 `;
 
 export default PostCard;
