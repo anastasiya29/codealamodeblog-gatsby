@@ -10,8 +10,9 @@ const SocialLinks = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  ${MEDIA.MIN_DESKTOP`
+  ${MEDIA.MIN_TABLET`
     flex-direction: column;
+    margin-right: 2em;
   `};
   a {
     margin-bottom: 10px;
@@ -27,7 +28,7 @@ const About = () => (
         <SocialIcon url="https://github.com/anastasiya29/" />
         <SocialIcon url="https://instagram.com/anastasiyar29" />
       </SocialLinks>
-      <div>
+      <div className="wide">
         <p>
           I am a JavaScript/front-end Evangelist at Sitecore. I spend my days
           working on various developer community programs - a job that I

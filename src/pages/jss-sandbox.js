@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from 'components/layout';
-import ResponsiveColumns from 'containers/responsiveColumns';
+import { Box } from 'rebass';
 import TutorialCard from 'containers/card/tutorialCard';
 import Emoji from 'components/emoji';
 import BannerImage from '../../content/images/banners/jssBanner.png';
@@ -15,7 +15,7 @@ const JssSandbox = () => (
     metaDescription="A blog series about learning Sitecore JavaScript Services (JSS)"
     pageImage={MetaImage}
   >
-    <ResponsiveColumns>
+    <Box p={['1em', '3em', '4em']}>
       <div>
         <p>
           <SocialIcon url="https://github.com/anastasiya29/jss-sandbox" />
@@ -182,7 +182,7 @@ const JssSandbox = () => (
           <h2 data-step-id="...">More coming soon!</h2>
         </div>
       </TutorialCard>
-    </ResponsiveColumns>
+    </Box>
   </Layout>
 );
 

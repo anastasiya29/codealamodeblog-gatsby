@@ -5,6 +5,7 @@ import TagsList from 'components/tagsList';
 import RecentPosts from 'components/recentPosts';
 import ProjectList from 'components/projectList';
 import ResponsiveColumns from 'containers/responsiveColumns';
+import MobileSliderColumn from 'containers/mobileSliderColumn';
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 import { Heading } from 'rebass';
@@ -28,7 +29,7 @@ const FlexBox = styled.div`
 const Index = () => (
   <Layout bannerImage={BannerImage}>
     <ResponsiveColumns>
-      <div>
+      <MobileSliderColumn>
         <Heading fontSize={[2, 3, 4]}>Top Tags</Heading>
         <FlexBox>
           <TagsList count={5} />
@@ -37,8 +38,8 @@ const Index = () => (
         <FlexBox>
           <ProjectList />
         </FlexBox>
-      </div>
-      <div>
+      </MobileSliderColumn>
+      <div className="wide">
         <Heading fontSize={[2, 3, 4]} mb={20}>
           Recent Posts
         </Heading>
