@@ -34,16 +34,16 @@ Optional) Install [Visual Studio Code](https://code.visualstudio.com/). This is 
 
 ### Set up Sitecore
 * Install a vanilla instance of Sitecore (I'm using verion 8.2 update 6 right now, but the specific version doesn't really matter for this demo)
-* Create an MVC Layout with a single placeholder called "main"
-![Main Layout](./mainlayout.png)
-* Create two new View Renderings called "User Greeting" and "Website Visit"
+* Create an MVC Layout with a single placeholder called `main`
+![](./mainlayout.png)
+* Create two new View Renderings called `User Greeting` and `Website Visit`
 ![User Greeting Rendering](./usergreetingrendering.png) ![Website Visit Rendering](./websitevisitrendering.png)
-* Create a placeholder settings item that permits our View Renderings to be inserted into the "main" placeholder
+* Create a placeholder settings item that permits our View Renderings to be inserted into the `main` placeholder
 ![Placeholder Settings](./placeholdersettings.png)
-* Create a new template called "Node Page" which uses the custom MVC Layout
+* Create a new template called `Node Page` which uses the custom MVC Layout
 ![Node Page template](./nodepagetemplate.png)
-* Insert an instance of "Node Page" into the content tree under "Home"
-* Use Experience Editor or Presentation Details to insert the two custom renderings into the page's "main" placeholder
+* Insert an instance of `Node Page` into the content tree under `Home`
+* Use Experience Editor or Presentation Details to insert the two custom renderings into the page's `main` placeholder
 ![Node Page content item](./nodepageinstance.png)
 
 Contents of `MainLayout.cshtml`
