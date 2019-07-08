@@ -22,7 +22,8 @@ class MobileSliderColumn extends Component {
   }
 
   toggleSlider() {
-    if (this.isPhone) {
+    // calculate viewportt width dynamically since user may have rotated device
+    if (window.innerWidth < BREAKPOINTS.PHONE) {
       this.bodyEl.style.overflow = this.state.visible ? 'scroll' : 'hidden';
       this.setState({
         visible: !this.state.visible,
@@ -32,7 +33,6 @@ class MobileSliderColumn extends Component {
 
   componentDidMount() {
     this.bodyEl = document.getElementsByTagName('body')[0];
-    this.isPhone = window.innerWidth < BREAKPOINTS.PHONE;
   }
 
   render() {

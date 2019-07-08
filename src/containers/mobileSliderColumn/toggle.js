@@ -11,6 +11,7 @@ const Button = styled.button`
     left: 0;
     display: block;
     background-color: ${accentTeal};
+    color: white;
     border-radius: 10px;
     padding: 10px 5px;
   `};
