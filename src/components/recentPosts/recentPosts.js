@@ -2,11 +2,12 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Card from 'containers/card';
 import PostPreview from 'components/postPreview';
+import Fade from 'react-reveal/Fade';
 
 const LISTING_QUERY = graphql`
   query RecentPostsQuery {
     allMarkdownRemark(
-      limit: 5
+      limit: 100
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
@@ -38,9 +39,11 @@ const RecentPosts = () => (
     query={LISTING_QUERY}
     render={({ allMarkdownRemark }) =>
       allMarkdownRemark.edges.map(({ node }) => (
-        <Card key={node.fields.slug} mb={[40, 50]}>
-          <PostPreview {...node} />
-        </Card>
+        <Fade bottom key={node.fields.slug}>
+          <Card mb={[40, 50]}>
+            <PostPreview {...node} />
+          </Card>
+        </Fade>
       ))
     }
   />
