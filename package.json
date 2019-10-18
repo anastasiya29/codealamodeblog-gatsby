@@ -1,6 +1,5 @@
 {
-  "name": "gatsby-universal",
-  "license": "MIT",
+  "name": "codealamode-blog",
   "author": "Anastasiya Flynn <flynnware@gmail.com>",
   "scripts": {
     "develop": "gatsby develop",
