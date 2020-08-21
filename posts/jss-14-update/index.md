@@ -13,7 +13,8 @@ featuredImage: post.png
 # JSS 14 - Don’t Call It a ComeBack
 Hey friends,
 
-It’s probably seemed like Sitecore’s `JavaScript SDK` (JSS) has been on the back burner since the last release. And yes, you read that right, JavaScript SDK (formerly known as JavaScript Services) got a little naming update to align better with its new `.NET Core SDK` cousin.
+[[snippet]]
+| It’s probably seems like Sitecore’s `JavaScript SDK` (JSS) has been on the back burner since the last release. And yes, you read that right, JavaScript SDK (formerly known as JavaScript Services) got a little naming update to align better with its new `.NET Core SDK` cousin.
 
 Before I go any further, I want to acknowledge our wonderful community, who definitely has not taken any breaks. They have kept up blogging, making videos, presenting at virtual user groups, doing demos for us (🥰), and lighting Slack on 🔥🔥 - keeping the knowledge sharing and innovation going strong. The JSS team and I want you all to know how much we appreciate the collaboration.
 
@@ -26,7 +27,7 @@ If you’re been working with Sitecore for a while, I’m sure you know and love
 
 He was part of the original JSS core dev team, never wears the same hair length twice, and you may remember him from popular hits like “HedgieCorn” and  “Friends don’t let friends use Habitat as a starter.” Also he’s a [cat owner](https://twitter.com/techphoria414/status/1255989723845230594) ([Dog too](https://twitter.com/techphoria414/status/1249766921819557888), but that’s not relevant). Anyway…
 
-In additional to answering pretty much every JSS question on Slack recently and helping build the new Developer Experience for you C# people,
+In addition to answering pretty much every JSS question on Slack recently and helping build the new Developer Experience for you C# people,
 ![](bill_gates.gif)
 Nick has recently taken over as Product Manager of JSS. This totally makes sense since he was already managing Headless Services, ASP.NET Core Rendering SDK, and Sitecore CLI, so having a unified team and roadmap is great for the future of HX (Headless Experience. Yes, I said it).
 
@@ -60,7 +61,7 @@ Totes cool…
 ![](./cool_doggo.gif)
 
 
-## Le roadmap…
+## La roadmap…
 (Yes, I’m putting the good stuff on the bottom so ya’ll have to scroll through all my memes)
 With Nick at the helm of All Things Headless, the JSS backlog has experienced quite the growth spurt. We’ve been discussing the interviews I’ve done with dev teams for the Best Practices Guide so he can get a better idea of what the needs and wants of the community are.
 
@@ -80,7 +81,7 @@ JSS is powering live sites across different business verticals, and as more deve
 
 We are proud to announce that after countless hours of research and development team interviews, we are ready to submit the first version of `JSS Guides and Recommended Practices` to you, our community, for your review and feedback. We examined patterns that we noticed in successful teams who feel more productive using JSS, and the complaints that we heard from teams who faced challenges with JSS. These guides are a collection of our learnings.
  
-Please review the `Guides and Recommended Practices` at [this preview URL](https://jss-docs-preview3.herokuapp.com/guides/). We welcome your feedback, questions, change suggestions, and additional content.  We’ve create GitHub issues for the 7 topic categories to facilitate group discussion. To contribute, submit comments to these GitHub issues. If you would like to submit PR’s for content changes, please use the [“guides” branch](https://github.com/Sitecore/jss/tree/guides).
+Please review the `Guides and Recommended Practices` at [THIS PREVIEW URL](https://jss-docs-preview3.herokuapp.com/guides/). We welcome your feedback, questions, change suggestions, and additional content.  We’ve create GitHub issues for the 7 topic categories to facilitate group discussion. To contribute, submit comments to these GitHub issues. If you would like to submit PR’s for content changes, please use the [“guides” branch](https://github.com/Sitecore/jss/tree/guides).
 
 * `Thinking in JSS`
 * `Code Patterns`
