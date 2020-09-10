@@ -94,11 +94,11 @@ Please review the [**Guides and Recommended Practices preview**](https://jss-doc
 * [GraphQL](https://github.com/Sitecore/jss/issues/437)
 * [WIP](https://github.com/Sitecore/jss/issues/438)
 
-To tell us about your ideas for `Contract-First` workflow, check out [Developer Workflows Guide: Contract-First](https://jss-docs-preview3.herokuapp.com/guides/thinking-in-jss/developer-workflows#contract-first), and post in the [Thinking In JSS](/) issue.
+To tell us about your ideas for `Contract-First` workflow, check out [Developer Workflows Guide: Contract-First](https://jss-docs-preview3.herokuapp.com/guides/thinking-in-jss/developer-workflows#contract-first), and post in the [Thinking In JSS](https://github.com/Sitecore/jss/issues/432) issue.
 
 Did we miss a major topic? Does something need more details? Do you like having `docs` and `guides` content separate? Post in the `WIP` issue.
 
-Thank you, #SitecoreJSS community!!
+**Thank you, `#SitecoreJSS` community!!**
 
 ---
 
